@@ -1,0 +1,10 @@
+@use "../../../../styles/common" as *;
+
+.secondaryBtn {
+    background-color: $color-secondary;
+    color: $color-white;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

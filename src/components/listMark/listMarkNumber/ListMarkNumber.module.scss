@@ -1,0 +1,16 @@
+@use "../../../../styles/common" as *;
+
+.listMark__number {
+    width: 24px;
+    height: 24px;
+    background-color: $color-primary;
+    color: $color-white;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 5px;
+    font-size: $size-14;
+    font-weight: 400;
+    margin-right: 8px;
+}

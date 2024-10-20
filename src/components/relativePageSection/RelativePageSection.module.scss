@@ -1,0 +1,26 @@
+@use "../../../styles/common" as *;
+
+.link {
+    text-decoration: none;
+    .relativeSection {
+        border: solid 1px $color-border-gray;
+        border-radius: 16px;
+        padding: 20px;
+        margin: 0 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        cursor: pointer;
+        .relativeTitle {
+            font-size: $size-20;
+            font-weight: 700;
+            color: $color-primary;
+        }
+        .relativeText {
+            font-size: $size-14;
+            margin-top: 16px;
+            color: $color-black;
+        }
+    }
+}
+

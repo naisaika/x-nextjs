@@ -1,0 +1,7 @@
+@use "../../../../../styles/common" as *;
+
+.listContents {
+    display: flex;
+    gap: 24px;
+    margin: 16px 0;
+}

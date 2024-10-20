@@ -1,0 +1,41 @@
+@use "../../../../../styles/common" as *;
+
+.contentsList {
+    list-style: none;
+    .contentsText {
+        font-size: $size-14;
+        padding: 16px 24px;
+        line-height: 1.75;
+        font-weight: 400;
+    }
+    .pointSection {
+        background-color: $color_open-light;
+        border-radius: 8px;
+        padding: 24px;
+        .pointTitleContainer {
+            display: flex;
+            align-items: center;
+            margin: 0 0 24px 24px;
+            .pointTitle {
+                margin-left: 8px;
+                font-weight: 700;
+            }
+        }
+        .pointList {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .pointListContents {
+                margin-left: 48px;
+                display: flex;
+                align-items: center;
+                .listText {
+                    margin-left: 8px;
+                    font-size: $size-14;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

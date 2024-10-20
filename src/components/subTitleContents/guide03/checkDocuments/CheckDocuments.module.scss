@@ -1,0 +1,21 @@
+@use "../../../../../styles/common" as *;
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    .listTitle {
+        font-size: $size-18;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    .listImg {
+        cursor: pointer;
+    }
+    .listText {
+        font-size: $size-14;
+        .listText__link {
+            color: $color-secondary;
+        }
+    }
+}

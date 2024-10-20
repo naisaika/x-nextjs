@@ -1,0 +1,11 @@
+
+@use "../../../../styles/common" as *;
+
+.primaryBtn {
+    background-color: $color-primary;
+    color: $color-white;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

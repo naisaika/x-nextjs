@@ -1,0 +1,121 @@
+/*color*/
+$color-primary: #11296C;
+$color-primary-10pct: #DBDFE9;
+$color-primary-30pct: #AEB5CB;
+$color-secondary: #CC2936;
+$color-black: #333;
+$color-white: #fff;
+$color-gray: #F1F1F3;
+$color-border-gray: #D6D7DC;
+$color-open-light: #F1F7FF;
+$gradient-primary: linear-gradient(to right, #0C1438, #11296C);
+
+/*font size*/
+$size-18: 1.125rem;
+$size-20: 1.25rem;
+$size-22: 1.375rem;
+$size-32: 2rem;
+$size-14: 0.875rem;
+
+.section {
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/*h1 title*/
+.sectionTitle {
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: $size-32;
+    font-weight: 900;
+}
+
+.sectionDescription {
+    font-size: $size-14;
+    margin: 8px auto 40px;
+}
+
+.contentsContainer {
+    background-color: $color-gray;
+}
+
+.topImg {
+    display: block;
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 50%;
+    height: auto;
+}
+
+/*contents Section*/
+.contentsSection {
+    background-color: $color-white;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.contentsBox {
+    margin-bottom: 40px;
+}
+
+/*h2 title*/
+.subTitle {
+    padding: 16px;
+    background-color: $color-primary-10pct;
+    border: solid 1px $color_primary-30pct;
+    border-radius: 4px;
+    color: $color-primary;
+    font-weight: 900;
+    font-size: $size-20;
+    display: flex;
+    align-items: center;
+}
+
+/*h2 title elements*/
+.subTitle__text {
+    margin-left: 4px;
+}
+
+.subTitle__number {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: $size-22;
+    margin-top: 2px;
+}
+
+/*contents wrapper*/
+.contentsWrapper {
+    padding: 0 24px;
+}
+
+/* contents image*/
+.imgContainer {
+   text-align: center;
+   margin-top: 16px;
+    .subImg {
+        width: 50%;
+        height: auto;
+    }
+}
+
+/*guide text*/
+.guideText {
+    font-size: $size-14;
+    padding: 16px 0;
+    line-height: 1.75;
+    text-align: justify;
+}
+
+/*line*/
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-border-gray;
+    display: block;
+}
