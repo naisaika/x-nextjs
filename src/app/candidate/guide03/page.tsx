@@ -46,7 +46,7 @@ const Guide03 = () => {
             {sectionContents?.contents.map((content, index) => (
               <div key={content.id} className={styles.contentsBox} id={content.anchorlink}>
                 <SubTitle>
-                  <span className={styles.subTitle__number}>{index + 1}.</span>
+                  <span>{index + 1}.</span>
                   <p className={styles.subTitle__text}>{content.contentsTitle}</p>
                 </SubTitle>
                 {content.id === 0 ? (
@@ -67,14 +67,16 @@ const Guide03 = () => {
           </div>
         </div>
       </div>
-      <PrimaryButton>
-        <span>就活完全ガイドTOP</span>
-        <Image src="/list-mark/right.png" alt="ボタンアイコン" width={24} height={24} priority></Image>
-      </PrimaryButton>
-      <SecondaryButton>
-        <span>Factor Xトップページへ戻る</span>
-        <Image src="/list-mark/right-double.png" alt="ボタンアイコン" width={24} height={24} priority></Image>
-      </SecondaryButton>
+      <div className={styles.buttonContainer}>
+        <PrimaryButton>
+          <span className={styles.buttonText}>就活完全ガイドTOP</span>
+          <Image src="/list-mark/right.png" alt="ボタンアイコン" width={24} height={24} priority></Image>
+        </PrimaryButton>
+        <SecondaryButton>
+          <span>Factor Xトップページへ戻る</span>
+          <Image src="/list-mark/right-double.png" alt="ボタンアイコン" width={24} height={24} priority></Image>
+        </SecondaryButton>
+      </div>
     </section>
   )
 }
