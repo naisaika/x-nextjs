@@ -66,16 +66,16 @@ const Guide03 = () => {
               <RelativePageSection sectionId={SECTION_ID}/>
           </div>
         </div>
-      </div>
-      <div className={styles.buttonContainer}>
-        <PrimaryButton>
-          <span className={styles.buttonText}>就活完全ガイドTOP</span>
-          <Image src="/list-mark/right.png" alt="ボタンアイコン" width={24} height={24} priority></Image>
-        </PrimaryButton>
-        <SecondaryButton>
-          <span>Factor Xトップページへ戻る</span>
-          <Image src="/list-mark/right-double.png" alt="ボタンアイコン" width={24} height={24} priority></Image>
-        </SecondaryButton>
+        <div className={styles.buttonContainer}>
+          <PrimaryButton>
+            <span className={styles.buttonText}>就活完全ガイドTOP</span>
+            <Image src="/list-mark/right.png" alt="ボタンアイコン" width={24} height={24} priority></Image>
+          </PrimaryButton>
+          <SecondaryButton>
+            <span className={styles.buttonText}>Factor Xトップページへ戻る</span>
+            <Image src="/list-mark/right-double.png" alt="ボタンアイコン" width={24} height={24} priority></Image>
+          </SecondaryButton>
+        </div>
       </div>
     </section>
   )

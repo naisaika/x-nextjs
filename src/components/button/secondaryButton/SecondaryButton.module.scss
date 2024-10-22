@@ -1,11 +1,5 @@
 @use "../../../../styles/common" as *;
 
 .secondaryBtn {
-    background-color: $color-secondary;
-    color: $color-white;
-    border: none;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    width: 100%;
+    @include btn($color-secondary, #AC1622);
 }

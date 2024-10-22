@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./Apperance.module.scss";
+import styles from "./ApperanceText.module.scss";
 
 interface AppearanceTextType {
     id: number;

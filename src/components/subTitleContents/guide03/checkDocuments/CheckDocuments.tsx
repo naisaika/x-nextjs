@@ -48,7 +48,7 @@ export const CheckDocuments = () => {
             {CHECK_LISTS.map((list) => {
                 return (
                     <li key={list.id}>
-                        <p className={styles.listTitle}>{list.title}</p>
+                        <h3 className={styles.listTitle}>{list.title}</h3>
                         {list.id === 0 || 1? (
                         <>
                             {list.img && list.link && (

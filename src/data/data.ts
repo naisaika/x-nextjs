@@ -162,22 +162,22 @@ export const GUIDE_SECTION_CONTENTS: GuideSectionType[] = [
             { 
                 id: 0, 
                 contentsTitle: "面接当日の流れ",
-                anchorlink: "interviewFlow"
+                anchorlink: "flowInterview"
             },
             { 
                 id: 1, 
                 contentsTitle: "頻出質問への対策",
-                anchorlink: "interviewQuestion"
+                anchorlink: "frequentQuestion"
             },
             { 
                 id: 2, 
                 contentsTitle: "面接テクニック",
-                anchorlink: "interviewTechnique"
+                anchorlink: "technique"
             },
             { 
                 id: 3,
                 contentsTitle: "面接官の視点を理解する",
-                anchorlink: "pointView"
+                anchorlink: "viewOfInterviewer"
             },
             { 
                 id: 4, 

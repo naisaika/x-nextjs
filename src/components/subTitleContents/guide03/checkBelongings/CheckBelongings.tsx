@@ -93,7 +93,7 @@ export const CheckBelongings = () => {
             {BELONGINGS_LISTS.map((list) => {
                 return (
                     <li key={list.id} className={styles.listContents}>
-                        <p className={styles.listTitle}>{list.title}</p>
+                        <h3 className={styles.listTitle}>{list.title}</h3>
                         <Image src={list.img} alt="持ち物画像" width={120} height={90} priority></Image>
                         <div>
                             <p className={styles.listText}>{list.text}</p>

@@ -51,7 +51,7 @@ export const ResearchCompany = () => {
                             </p> 
                             <div className={styles.pointSection}>
                                 <div className={styles.pointTitleContainer}>
-                                    <Image src="/list-mark/flug.png" 
+                                    <Image src="/list-mark/flag.png" 
                                         alt="フラグマーク画像" 
                                         width={24} height={24} priority>
                                     </Image> 
@@ -71,7 +71,6 @@ export const ResearchCompany = () => {
                                     })}
                                 </ul>
                             </div>
-
                         </>
                     }
                     {title.id === 1 && 

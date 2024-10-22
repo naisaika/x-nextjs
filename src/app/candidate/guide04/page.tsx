@@ -4,7 +4,11 @@ import Image from 'next/image';
 import styles from "./Guide04.module.scss";
 import { SubTitle } from '@/components/subtitle/SubTitle';
 import { ContentsList } from '@/components/contentsList/ContentsList';
-import { ResearchCompany } from '@/components/subTitleContents/guide03/researchCompany/ResearchCompany';
+import { FlowInterview } from '@/components/subTitleContents/guide04/flowInterview/FlowInterview';
+import { FrequentQuestion } from '@/components/subTitleContents/guide04/frequentQuestion/FrequentQuestion';
+import { Technique } from '@/components/subTitleContents/guide04/technique/Technique';
+import { ViewOfInterviewer } from '@/components/subTitleContents/guide04/viewOfInterviewer/ViewOfInterviewer';
+import { Imporovement } from '@/components/subTitleContents/guide04/improvement/Imporovement';
 
 const SECTION_ID = 3;
 const sectionData = GUIDE_DATA.find((title) => title.id === SECTION_ID);
@@ -34,13 +38,21 @@ const Guide03 = () => {
             <SubTitle>目次</SubTitle>
             <ContentsList sectionId={SECTION_ID}/>
             {sectionContents?.contents.map((content, index) => (
-              <div key={content.id} className={styles.contentswrapper}>
+              <div key={content.id} className={styles.contentsBox} id={content.anchorlink}>
                 <SubTitle>
                   <span className={styles.subTitle__number}>{index + 1}.</span>
                   <p className={styles.subTitle__text}>{content.contentsTitle}</p>
                 </SubTitle>
-
-                  <ResearchCompany/>
+                {content.id === 0 ? (
+                  <FlowInterview/>
+                ) : content.id === 1 ? (
+                  <FrequentQuestion />
+                ) : content.id === 2 ? (
+                  <Technique/>
+                ) : content.id === 3 ? (
+                  <ViewOfInterviewer/>
+                ) : <Imporovement/>
+                }
               </div>
             ))}
           </div>

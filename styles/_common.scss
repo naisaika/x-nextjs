@@ -3,6 +3,7 @@ $color-primary: #11296C;
 $color-primary-10pct: #DBDFE9;
 $color-primary-30pct: #AEB5CB;
 $color-secondary: #CC2936;
+$color-tertiary-30pct: #FDE9D2;
 $color-black: #333;
 $color-white: #fff;
 $color-gray: #F1F1F3;
@@ -18,6 +19,26 @@ $size-22: 1.375rem;
 $size-32: 2rem;
 $size-14: 0.875rem;
 
+@mixin btn($bg, $shadow) {
+    background-color: $bg;
+    color: $color-white;
+    font-weight: 600;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    padding: 16px 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: $size-16;
+    border-radius: 4px;
+    box-shadow: 0 3px 0 0 $shadow;
+    &:hover {
+        opacity: .8;
+    }
+}
+
 .section {
     margin: 0 auto;
 }
@@ -25,6 +46,12 @@ $size-14: 0.875rem;
 .wrapper {
     max-width: 1024px;
     margin: 0 auto;
+}
+
+
+/*h1 section*/
+.titleContainer {
+    background-color: $color-white;
 }
 
 /*h1 title*/
@@ -69,7 +96,7 @@ $size-14: 0.875rem;
 .subTitle {
     padding: 16px;
     background-color: $color-primary-10pct;
-    border: solid 1px $color_primary-30pct;
+    border: solid 1px $color-primary-30pct;
     border-radius: 4px;
     color: $color-primary;
     font-weight: 900;
