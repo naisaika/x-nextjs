@@ -2,15 +2,16 @@ import React from 'react';
 import styles from "./FlowInterview.module.scss";
 import Image from 'next/image';
 import { ContentsTitle } from '@/components/contentsTitle/ContentsTitle';
-import { ListMarkNumber } from '@/components/listMark/listMarkNumber/ListMarkNumber';
 import { WORRY_POINT_TEXT } from './worryPointText/WorryPointText';
+import { NumberList } from '@/components/numberList/NumberList';
+import { FlagContentsContainer } from '@/components/flagContentsContainer/FlagContentsContainer';
 
 interface H3TitleType {
     id: number;
     title: string;
 }
 
-interface FlowListType {
+export interface FlowListType {
     id: number;
     text: string;
 }
@@ -79,14 +80,7 @@ export const FlowInterview = () => {
                     <div className={styles.line}></div>
                     {title.id === 0 && 
                         <>
-                            <ol className={styles.list}>
-                            {FLOW_LISTS.map((list) => (
-                                <li key={list.id} className={styles.listContents}>
-                                    <ListMarkNumber>{list.id + 1}</ListMarkNumber>
-                                    <p className={styles.liText}>{list.text}</p>
-                                </li>
-                            ))}  
-                            </ol>
+                        <NumberList list={FLOW_LISTS}></NumberList>
                             <div className={styles.attentionContainer}>
                                 <Image src="/list-mark/attention.png" 
                                     alt="注意マーク画像" 
@@ -100,23 +94,7 @@ export const FlowInterview = () => {
                         </>
                     }
                     {title.id === 1 && 
-                        <div className={styles.pointSection}>
-                            {POINT_TITLE.map((point) => {
-                                const pointText = WORRY_POINT_TEXT.find((text) => text.id === point.id)
-                                return(
-                                    <div key={point.id} className={styles.pointContainer}>
-                                        <div className={styles.pointTitleContainer}>
-                                            <Image src="/list-mark/flag.png" 
-                                                alt="フラグマーク画像" 
-                                                width={24} height={24} priority>
-                                            </Image> 
-                                            <span className={styles.pointTitle}>{point.title}</span>
-                                        </div>
-                                        <div className={styles.pointText}>{pointText?.text}</div>
-                                    </div>
-                                )
-                            })}
-                        </div>
+                        <FlagContentsContainer titles={POINT_TITLE} text={WORRY_POINT_TEXT}></FlagContentsContainer>
                     }
                 </li>
             ))}

@@ -1,0 +1,16 @@
+@use "../../../styles/common" as *;
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 32px 0;
+    padding: 0 24px;
+    .listContents {
+        display: flex;
+        align-items: center;
+        font-size: $size-14;
+        font-weight: 500;
+    }
+}   

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import styles from "./ResearchCompany.module.scss";
 import { ContentsTitle } from '@/components/contentsTitle/ContentsTitle';
+import { FlagContentsContainer } from '@/components/flagContentsContainer/FlagContentsContainer';
 
 interface H3TitleType {
     id: number;
@@ -49,28 +50,30 @@ export const ResearchCompany = () => {
                                 応募先企業の概要や理念、経営方針を知ることは、志望動機や活かせる経験・スキルなどのアピールに結びつきます。<br></br>
                                 また、企業が求める方向性と自分のビジョンが一致しているかどうかを確認することもできるため、アンマッチな企業への転職も防ぐことができます。
                             </p> 
-                            <div className={styles.pointSection}>
-                                <div className={styles.pointTitleContainer}>
-                                    <Image src="/list-mark/flag.png" 
-                                        alt="フラグマーク画像" 
-                                        width={24} height={24} priority>
-                                    </Image> 
-                                    <span className={styles.pointTitle}>企業への理解の深め方</span>
-                                </div>
-                                <ul className={styles.pointList}>
-                                    {CHECK_LISTS.map((list) => {
-                                        return (
-                                            <li key={list.id} className={styles.pointListContents}>
-                                                <Image src="/list-mark/check.png" 
-                                                    alt="チェックマーク画像" 
-                                                    width={24} height={24} priority>
-                                                </Image>
-                                                <span className={styles.listText}>{list.contents}</span>
-                                            </li>
+                            <FlagContentsContainer
+                                titles={[{ id: 0, title: "企業への理解の深め方" }]}
+                                text={[
+                                    {
+                                    id: 0,
+                                    text: (
+                                        <ul>
+                                            {CHECK_LISTS.map((list) => (
+                                                <li key={list.id}>
+                                                <Image
+                                                    src="/list-mark/check.png"
+                                                    alt="チェックマーク画像"
+                                                    width={24}
+                                                    height={24}
+                                                    priority
+                                                />
+                                                <span>{list.contents}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
                                         )
-                                    })}
-                                </ul>
-                            </div>
+                                    }
+                                ]}
+                            />
                         </>
                     }
                     {title.id === 1 && 

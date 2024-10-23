@@ -1,1 +1,9 @@
 @use "../../../../../styles/common" as *;
+
+.contentsList {
+    list-style: none;
+    padding-bottom: 40px;
+    .textContainer {
+        margin: 16px 0;
+    }
+}

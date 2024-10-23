@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./WorryPointText.module.scss";
 
-interface WorryPointTextType {
+export interface WorryPointTextType {
     id: number;
     text: JSX.Element;
 }
