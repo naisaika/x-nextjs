@@ -2,13 +2,14 @@ import React from 'react';
 import { GUIDE_DATA, GUIDE_SECTION_CONTENTS } from '@/data/data';
 import Image from 'next/image';
 import styles from "./Guide04.module.scss";
-import { SubTitle } from '@/components/subtitle/SubTitle';
-import { ContentsList } from '@/components/contentsList/ContentsList';
+import { SubTitle } from '@/components/parts/subtitle/SubTitle';
+import { ContentsList } from '@/components/parts/contentsList/ContentsList';
 import { FlowInterview } from '@/components/subTitleContents/guide04/flowInterview/FlowInterview';
 import { FrequentQuestion } from '@/components/subTitleContents/guide04/frequentQuestion/FrequentQuestion';
 import { Technique } from '@/components/subTitleContents/guide04/technique/Technique';
 import { ViewOfInterviewer } from '@/components/subTitleContents/guide04/viewOfInterviewer/ViewOfInterviewer';
 import { Imporovement } from '@/components/subTitleContents/guide04/improvement/Imporovement';
+import { RelativePageSection } from '@/components/parts/relativePageSection/RelativePageSection';
 
 const SECTION_ID = 3;
 const sectionData = GUIDE_DATA.find((title) => title.id === SECTION_ID);
@@ -55,6 +56,7 @@ const Guide03 = () => {
                 }
               </div>
             ))}
+            <RelativePageSection sectionId={SECTION_ID}/>
           </div>
         </div>
       </div>

@@ -187,3 +187,10 @@ export const GUIDE_SECTION_CONTENTS: GuideSectionType[] = [
         ]
     }
 ];
+
+/* H3 title-type */
+
+ export interface H3TitleType {
+    id: number;
+    title: string;
+  }

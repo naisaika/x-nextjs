@@ -1,15 +1,12 @@
 import React from 'react';
 import styles from "./FlowInterview.module.scss";
 import Image from 'next/image';
-import { ContentsTitle } from '@/components/contentsTitle/ContentsTitle';
+import { ContentsTitle } from '@/components/parts/contentsTitle/ContentsTitle';
 import { WORRY_POINT_TEXT } from './worryPointText/WorryPointText';
-import { NumberList } from '@/components/numberList/NumberList';
-import { FlagContentsContainer } from '@/components/flagContentsContainer/FlagContentsContainer';
-
-interface H3TitleType {
-    id: number;
-    title: string;
-}
+import { NumberList } from '@/components/parts/numberList/NumberList';
+import { FlagContentsContainer } from '@/components/parts/flagContentsContainer/FlagContentsContainer';
+import { Attention } from '@/components/parts/attention/Attention';
+import { H3TitleType } from '@/data/data';
 
 export interface FlowListType {
     id: number;
@@ -80,17 +77,11 @@ export const FlowInterview = () => {
                     <div className={styles.line}></div>
                     {title.id === 0 && 
                         <>
-                        <NumberList list={FLOW_LISTS}></NumberList>
-                            <div className={styles.attentionContainer}>
-                                <Image src="/list-mark/attention.png" 
-                                    alt="注意マーク画像" 
-                                    width={24} height={24} priority>
-                                </Image> 
-                                <p className={styles.attentionText}>
-                                    着席時は、椅子の背もたれにはもたれかからず、浅く腰掛けるようにしましょう。<br></br>
-                                    また、面接中に貧乏ゆすりや腕組み、顔や髪を必要以上に触るなど普段の癖が出ないように注意してくださいね。
-                                </p>
-                            </div>
+                            <NumberList list={FLOW_LISTS}></NumberList>
+                            <Attention>
+                                着席時は、椅子の背もたれにはもたれかからず、浅く腰掛けるようにしましょう。<br></br>
+                                また、面接中に貧乏ゆすりや腕組み、顔や髪を必要以上に触るなど普段の癖が出ないように注意してくださいね。
+                            </Attention>
                         </>
                     }
                     {title.id === 1 && 

@@ -1,12 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import styles from "./ResearchMyself.module.scss";
-import { ContentsTitle } from '@/components/contentsTitle/ContentsTitle';
-
-interface H3TitleType {
-    id: number;
-    title: string;
-}
+import { ContentsTitle } from '@/components/parts/contentsTitle/ContentsTitle';
+import { H3TitleType } from '@/data/data';
 
 const H3_TITLE: H3TitleType[] = [
     { id: 0, title: "①強み・弱み" },

@@ -1,13 +1,9 @@
 import React from 'react';
 import styles from "./BuildConfidence.module.scss";
-import { ContentsTitle } from '@/components/contentsTitle/ContentsTitle';
+import { ContentsTitle } from '@/components/parts/contentsTitle/ContentsTitle';
+import { H3TitleType } from '@/data/data';
 
-interface ListTitleType {
-    id: number;
-    title: string;
-}
-
-const LIST_TITLE: ListTitleType[] = [
+const H3_TITLE: H3TitleType[] = [
     { id: 0, title: "面接当日のシミュレーションを行う" },
     { id: 1, title: "根拠のない自信を持つ" },
     { id: 2, title: "企業・業界研究を重ねる" },
@@ -20,7 +16,7 @@ export const BuildConfidence = () => {
             面接に緊張はつきものです。誰しも少なからず不安や緊張を抱えて当日を迎えます。<br></br>
             少しでも緊張を和らげ自信を持てるようにするために事前の準備を念入りにすることが大切です。
         </p>
-        {LIST_TITLE.map((title) => {
+        {H3_TITLE.map((title) => {
             return (
                 <div key={title.id}>
                     <ContentsTitle>{title.title}</ContentsTitle>

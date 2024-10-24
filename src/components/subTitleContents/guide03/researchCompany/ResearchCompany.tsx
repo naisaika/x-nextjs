@@ -1,13 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
 import styles from "./ResearchCompany.module.scss";
-import { ContentsTitle } from '@/components/contentsTitle/ContentsTitle';
-import { FlagContentsContainer } from '@/components/flagContentsContainer/FlagContentsContainer';
-
-interface H3TitleType {
-    id: number;
-    title: string;
-}
+import { ContentsTitle } from '@/components/parts/contentsTitle/ContentsTitle';
+import { FlagContentsContainer } from '@/components/parts/flagContentsContainer/FlagContentsContainer';
+import { H3TitleType } from '@/data/data';
 
 interface checkListType {
     id: number;

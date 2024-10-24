@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { GUIDE_SECTION_CONTENTS } from '@/data/data';
-import { ListMarkNumber } from '@/components/listMark/listMarkNumber/ListMarkNumber';
+import { ListMarkNumber } from '@/components/parts/listMark/listMarkNumber/ListMarkNumber';
 import styles from "./ContentsList.module.scss";
 import Link from 'next/link';
 

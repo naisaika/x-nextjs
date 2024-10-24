@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./CheckAppearance.module.scss";
 import Image from 'next/image';
-import { ContentsTitle } from '@/components/contentsTitle/ContentsTitle';
+import { ContentsTitle } from '@/components/parts/contentsTitle/ContentsTitle';
 import { APPEARANCE_TEXT } from './appearanceText/AppearanceText';
 
 interface appearanceType {

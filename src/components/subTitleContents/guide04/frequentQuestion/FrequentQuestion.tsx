@@ -1,13 +1,9 @@
 import React from 'react';
 import styles from "./FrequentQuestion.module.scss";
 import Image from 'next/image';
-import { ContentsTitle } from '@/components/contentsTitle/ContentsTitle';
+import { ContentsTitle } from '@/components/parts/contentsTitle/ContentsTitle';
 import { QUESTION_TEXT } from './questionText/QuestionText';
-
-interface H3TitleType {
-  id: number;
-  title: string;
-}
+import { H3TitleType } from '@/data/data';
 
 const H3_TITLE: H3TitleType[] = [
   { id: 0, title: "①自己PR" },

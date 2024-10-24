@@ -2,18 +2,4 @@
 
 .contentsList {
     list-style: none; 
-    .attentionContainer {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background-color: $color-tertiary-30pct;
-        padding: 16px;
-        border-radius: 8px;
-        margin: 0 88px;
-        .attentionText {
-            color: $color-secondary;
-            font-size: $size-14;
-            font-weight: 800;
-        }
-    }
 }
