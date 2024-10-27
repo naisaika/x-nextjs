@@ -85,7 +85,10 @@ export const FlowInterview = () => {
                         </>
                     }
                     {title.id === 1 && 
-                        <FlagContentsContainer titles={POINT_TITLE} text={WORRY_POINT_TEXT}></FlagContentsContainer>
+                        <>
+                            <FlagContentsContainer title={POINT_TITLE[0].title} text={WORRY_POINT_TEXT[0].text}></FlagContentsContainer>
+                            <FlagContentsContainer title={POINT_TITLE[1].title} text={WORRY_POINT_TEXT[1].text}></FlagContentsContainer>
+                        </>
                     }
                 </li>
             ))}

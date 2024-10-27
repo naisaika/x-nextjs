@@ -4,3 +4,7 @@
 .primaryBtn {
     @include btn($color-primary, #071746);
 }
+
+.link {
+    text-decoration: none;
+}

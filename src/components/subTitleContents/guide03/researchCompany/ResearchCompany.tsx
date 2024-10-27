@@ -4,18 +4,14 @@ import styles from "./ResearchCompany.module.scss";
 import { ContentsTitle } from '@/components/parts/contentsTitle/ContentsTitle';
 import { FlagContentsContainer } from '@/components/parts/flagContentsContainer/FlagContentsContainer';
 import { H3TitleType } from '@/data/data';
-
-interface checkListType {
-    id: number;
-    contents: string;
-}
+import { CheckListType } from '@/data/data';
 
 const H3_TITLE: H3TitleType[] = [
     { id: 0, title: "①企業理解を深める" },
     { id: 1, title: "②職場の雰囲気を知る" },
 ]
 
-const CHECK_LISTS: checkListType[] = [
+const CHECK_LISTS: CheckListType[] = [
     { id: 0, contents: "企業のホームページや求人情報をきちんと見る" },
     { id: 1, contents: "ビジネス雑誌や四季報、業界地図などを用いて業界での位置づけや競合他社との差別化・優位性などを知る" },
     { id: 2, contents: "実際に企業の製品やサービスを利用し、自分の考え方との接点を見つけてみる" },
@@ -47,14 +43,11 @@ export const ResearchCompany = () => {
                                 また、企業が求める方向性と自分のビジョンが一致しているかどうかを確認することもできるため、アンマッチな企業への転職も防ぐことができます。
                             </p> 
                             <FlagContentsContainer
-                                titles={[{ id: 0, title: "企業への理解の深め方" }]}
-                                text={[
-                                    {
-                                    id: 0,
-                                    text: (
-                                        <ul>
-                                            {CHECK_LISTS.map((list) => (
-                                                <li key={list.id}>
+                                title={"企業への理解の深め方"}
+                                text={
+                                    <ul>
+                                        {CHECK_LISTS.map((list) => (
+                                            <li key={list.id}>
                                                 <Image
                                                     src="/list-mark/check.png"
                                                     alt="チェックマーク画像"
@@ -63,12 +56,10 @@ export const ResearchCompany = () => {
                                                     priority
                                                 />
                                                 <span>{list.contents}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                        )
-                                    }
-                                ]}
+                                            </li>
+                                        ))}
+                                    </ul>  
+                                }
                             />
                         </>
                     }

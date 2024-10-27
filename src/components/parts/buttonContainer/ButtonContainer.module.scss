@@ -1,0 +1,14 @@
+@use "../../../../styles/common" as *;
+
+/* button Container*/
+.buttonContainer {
+    max-width: 1024px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: $color-gray;
+    .buttonText {
+        padding: 4px 4px 0;
+    }
+}

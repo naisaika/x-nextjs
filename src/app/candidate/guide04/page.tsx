@@ -10,12 +10,13 @@ import { Technique } from '@/components/subTitleContents/guide04/technique/Techn
 import { ViewOfInterviewer } from '@/components/subTitleContents/guide04/viewOfInterviewer/ViewOfInterviewer';
 import { Imporovement } from '@/components/subTitleContents/guide04/improvement/Imporovement';
 import { RelativePageSection } from '@/components/parts/relativePageSection/RelativePageSection';
+import { ButtonContainer } from '@/components/parts/buttonContainer/ButtonContainer';
 
 const SECTION_ID = 3;
 const sectionData = GUIDE_DATA.find((title) => title.id === SECTION_ID);
 const sectionContents = GUIDE_SECTION_CONTENTS.find((section) => section.id === SECTION_ID);
 
-const Guide03 = () => {
+const Guide04 = () => {
   return (
     <section id="guide04" className={styles.section}>
       <div className={styles.titleContainer}>
@@ -35,11 +36,11 @@ const Guide03 = () => {
                 className={styles.topImg}>
               </Image>
             )}
-          <div>
+          <div className={styles.contentsSection}>
             <SubTitle>目次</SubTitle>
             <ContentsList sectionId={SECTION_ID}/>
             {sectionContents?.contents.map((content, index) => (
-              <div key={content.id} className={styles.contentsBox} id={content.anchorlink}>
+              <div key={content.id} id={content.anchorlink}>
                 <SubTitle>
                   <span className={styles.subTitle__number}>{index + 1}.</span>
                   <p className={styles.subTitle__text}>{content.contentsTitle}</p>
@@ -59,9 +60,10 @@ const Guide03 = () => {
             <RelativePageSection sectionId={SECTION_ID}/>
           </div>
         </div>
+        <ButtonContainer/>
       </div>
     </section>
   )
 }
 
-export default Guide03
+export default Guide04

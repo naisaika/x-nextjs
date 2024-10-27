@@ -86,35 +86,29 @@ export const TECHNIQUE_TEXT: TechniqueTextType[] = [
               PREP法は、結論を重視して相手へ伝える方法で、短時間で相手に説得力を与えるのに効果的です。<br></br>
               あるトピックについての立場や考えを明確に伝える際に利用されることが多く、自己PRの構成に最適とされています。
             </p>
-            {POINT_TITLE[0].id === 0 && (
-                <FlagContentsContainer 
-                    titles={POINT_TITLE.filter(title => title.id === 0)} 
-                    text={[
-                        {
-                        id: 0,
-                        text: <NumberList list={POINT_TEXT[0].points} />,
-                        },
-                    ]}
-                />
-            )}
-            <p className={styles.listText}>このように構成を組み立てることで正確に面接官へ自分のアピールポイントを伝えることができます。</p>
+            <FlagContentsContainer 
+              title={POINT_TITLE[0].title} 
+              text={
+              <>
+                <NumberList list={POINT_TEXT[0].points} />
+                <p className={styles.flagText}>このように構成を組み立てることで正確に面接官へ自分のアピールポイントを伝えることができます。</p>
+              </>
+              }
+            />
             <h4 className={styles.techniqueTitle}>STAR法</h4>
             <p className={styles.listText}>
               STAR法は、具体的な経験や事例を用いて相手に明確に伝えることで、効果的なコミュニケーションが期待できる方法です。<br></br>
               過去の経験や実績を具体的かつ構造的に伝える際に利用されることが多く、エピソードの構成に最適とされています。
             </p>
-            {POINT_TITLE[1].id === 1 && (
-                <FlagContentsContainer 
-                    titles={POINT_TITLE.filter(title => title.id === 0)} 
-                    text={[
-                        {
-                        id: 0,
-                        text: <NumberList list={POINT_TEXT[1].points} />,
-                        },
-                    ]}
-                />
-            )}
-            <p className={styles.listText}>このように構成を組み立てることで具体的なエピソードの状況や課題・行動・結果の情報が正確に面接官へ伝えることができます。</p>
+              <FlagContentsContainer 
+                  title={POINT_TITLE[1].title} 
+                  text={
+                    <>
+                      <NumberList list={POINT_TEXT[1].points} />
+                      <p className={styles.flagText}>このように構成を組み立てることで具体的なエピソードの状況や課題・行動・結果の情報が正確に面接官へ伝えることができます。</p>
+                    </>
+                  }
+              />
           </>
         ),
     },

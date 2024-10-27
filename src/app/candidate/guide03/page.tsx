@@ -11,8 +11,7 @@ import { CheckBelongings } from '@/components/subTitleContents/guide03/checkBelo
 import { BuildConfidence } from '@/components/subTitleContents/guide03/buildConfidence/BuildConfidence';
 import { RelativePageSection } from '@/components/parts/relativePageSection/RelativePageSection';
 import { CheckAppearance } from '@/components/subTitleContents/guide03/checkAppearance/CheckAppearance';
-import { PrimaryButton } from '@/components/button/primaryButton/PrimaryButton';
-import { SecondaryButton } from '@/components/button/secondaryButton/SecondaryButton';
+import { ButtonContainer } from '@/components/parts/buttonContainer/ButtonContainer';
 
 const SECTION_ID = 2;
 const sectionData = GUIDE_DATA.find((title) => title.id === SECTION_ID);
@@ -39,7 +38,7 @@ const Guide03 = () => {
               </Image>
             )}
           <div className={styles.contentsSection}>
-            <div className={styles.contentsBox}>
+            <div>
               <SubTitle>目次</SubTitle>
               <ContentsList sectionId={SECTION_ID}/>
             </div>
@@ -66,16 +65,7 @@ const Guide03 = () => {
               <RelativePageSection sectionId={SECTION_ID}/>
           </div>
         </div>
-        <div className={styles.buttonContainer}>
-          <PrimaryButton>
-            <span className={styles.buttonText}>就活完全ガイドTOP</span>
-            <Image src="/list-mark/right.png" alt="ボタンアイコン" width={24} height={24} priority></Image>
-          </PrimaryButton>
-          <SecondaryButton>
-            <span className={styles.buttonText}>Factor Xトップページへ戻る</span>
-            <Image src="/list-mark/right-double.png" alt="ボタンアイコン" width={24} height={24} priority></Image>
-          </SecondaryButton>
-        </div>
+        <ButtonContainer/>
       </div>
     </section>
   )

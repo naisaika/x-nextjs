@@ -1,1 +1,26 @@
 @use "../../../../../styles/common" as *;
+
+.contentsList {
+    list-style: none; 
+    .listText {
+        font-size: $size-14;
+        margin: 16px 0;
+        padding: 0 24px;
+        line-height: 1.75;
+        text-align: justify;
+    }
+    .list {
+        list-style: none;
+        padding: 16px 24px 16px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .listItem {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: $size-14;
+            font-weight: 600;
+        }
+    }
+}

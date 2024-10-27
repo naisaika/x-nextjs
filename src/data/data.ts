@@ -4,6 +4,8 @@ export interface GuideDataType {
     title: string;
     description: string;
     img: string;
+    topText: string;
+    link: string;
 }
 
 export const GUIDE_DATA: GuideDataType[] = [
@@ -11,25 +13,33 @@ export const GUIDE_DATA: GuideDataType[] = [
         id: 0, 
         title: "履歴書の書き方｜ポイント・ガイド",
         description: "就職・転職活動に欠かせない履歴書。どうやって書いたらいいの？何を書くべきなの？ポイントを解説。是非ご参考ください！",
-        img: "/top-img/guide01-top.png"
+        img: "/top-img/guide01-top.png",
+        topText: "Step.01｜採用担当者に響く！履歴書の書き方",
+        link: "/candidate/guide01"
     },
     { 
         id: 1, 
         title: "職務経歴書の書き方｜ポイント・ガイド",
         description: "就職・転職活動に欠かせない職務経歴書。どうやって書いたらいいの？何を書くべきなの？ポイントを解説。是非ご参考ください！",
-         img: "/top-img/guide02-top.png"
+        img: "/top-img/guide02-top.png",
+        topText: "Step.02｜魅力的に伝える！職務経歴書の書き方",
+        link: "/candidate/guide02"
     },
     { 
         id: 2, 
         title: "面接対策ガイド｜準備編",
         description: "内定を掴むためには、準備が何よりも大切！面接当日になって不安にならないためにもしっかりと準備を行いましょう。企業や自己の分析から持ち物や身だしなみのチェックリストまで解説しています。",
-         img: "/top-img/guide03-top.png"
+        img: "/top-img/guide03-top.png",
+        topText: "Step.03｜準備編｜内定を勝ち取る！面接対策",
+        link: "/candidate/guide03"
     },
     { 
         id: 3, 
         title: "面接対策ガイド｜当日編",
         description: "面接当日に自信を持って挑めるように、面接当日の流れや注意点のイメージを固めておきましょう。面接での受け答えのテクニックや面接官がどんな視点で評価をしているかを解説しています。",
-        img: "/top-img/guide04-top.png"
+        img: "/top-img/guide04-top.png",
+        topText: "Step.04｜当日編｜内定を勝ち取る！面接対策",
+        link: "/candidate/guide04"
     }
 ]
 
@@ -194,3 +204,10 @@ export const GUIDE_SECTION_CONTENTS: GuideSectionType[] = [
     id: number;
     title: string;
   }
+
+/* check-list type */
+
+export interface CheckListType {
+    id: number;
+    contents: string;
+}

@@ -3,6 +3,7 @@ import React from 'react';
 import styles from "./ResearchMyself.module.scss";
 import { ContentsTitle } from '@/components/parts/contentsTitle/ContentsTitle';
 import { H3TitleType } from '@/data/data';
+import { FlagContentsContainer } from '@/components/parts/flagContentsContainer/FlagContentsContainer';
 
 const H3_TITLE: H3TitleType[] = [
     { id: 0, title: "①強み・弱み" },
@@ -46,35 +47,30 @@ export const ResearchMyself = () => {
                             未経験の業界へ転職する場合は、その具体的理由を述べましょう。<br></br>
                             同業種への転職の場合は、前職を批判しないよう注意しましょう。<br></br>
                         </p> 
-                        <div className={styles.pointSection}>
-                            <div className={styles.pointTitleContainer}>
-                                <Image src="/list-mark/flug.png" 
-                                    alt="フラグマーク画像" 
-                                    width={24} height={24} priority>
-                                </Image> 
-                                <span className={styles.pointTitle}>志望動機の例文</span>
-                            </div>
-                            <div className={styles.pointTextContainer}>
-                                <p className={styles.pointText}>
-                                    私はこれまで、〇〇業界で〇〇の職務に携わってきました。
-                                    その中で培った計画的な進捗管理や、チームと連携したプロジェクト遂行能力を強みとしています。
-                                    特に、品質管理やコスト効率を重視する姿勢は、製造業でも求められるスキルと確信しています。
-                                    貴社が掲げる「〇〇の製品開発」「高品質な製品の安定供給」などの目標に向け、これまでの経験を活かしてプロセスの改善や効率化に貢献できると考えています。
-                                </p>
-                                <p className={styles.pointText}>
-                                    また、貴社を志望した理由は、〇〇技術に関する取り組みに深く共感したためです。
-                                    特に、持続可能な生産体制の確立や、革新的な製品開発に注力されている点に強く魅力を感じました。
-                                    これらは、今後の製造業界全体が直面する課題であり、私もその一端を担い、新たな挑戦に積極的に取り組みたいと考えています。
-                                    未経験の製造業界への挑戦となりますが、これまでの〇〇業界で得た経験は、製造業でも十分に応用できるものだと確信しています。
-                                </p>
-                            </div>
-
-                        </div>
-                    </>
-                }
-            </li>
-        ))}
-  </ul>
-</div>
+                        <FlagContentsContainer
+                            title={"志望動機の例文"}
+                            text={
+                                <>
+                                    <p>
+                                        私はこれまで、〇〇業界で〇〇の職務に携わってきました。
+                                        その中で培った計画的な進捗管理や、チームと連携したプロジェクト遂行能力を強みとしています。
+                                        特に、品質管理やコスト効率を重視する姿勢は、製造業でも求められるスキルと確信しています。
+                                        貴社が掲げる「〇〇の製品開発」「高品質な製品の安定供給」などの目標に向け、これまでの経験を活かしてプロセスの改善や効率化に貢献できると考えています。
+                                    </p>
+                                    <p>
+                                        また、貴社を志望した理由は、〇〇技術に関する取り組みに深く共感したためです。
+                                        特に、持続可能な生産体制の確立や、革新的な製品開発に注力されている点に強く魅力を感じました。
+                                        これらは、今後の製造業界全体が直面する課題であり、私もその一端を担い、新たな挑戦に積極的に取り組みたいと考えています。
+                                        未経験の製造業界への挑戦となりますが、これまでの〇〇業界で得た経験は、製造業でも十分に応用できるものだと確信しています。
+                                    </p>
+                                </>  
+                                }
+                            />
+                        </>
+                    }
+                </li>
+            ))}
+        </ul>
+    </div>
   )
 }

@@ -1,12 +1,16 @@
 import React from 'react';
 import styles from "./PrimaryButton.module.scss";
+import Link from 'next/link';
 
 interface ChildrenProps {
-    children: React.ReactNode;
+  link: string;
+  children: React.ReactNode;
 }
 
-export const PrimaryButton = ({children}: ChildrenProps) => {
+export const PrimaryButton = ({link = "#", children}: ChildrenProps) => {
   return (
-    <button type="button" className={styles.primaryBtn}>{children}</button>
+    <Link href={link} className={styles.link}>
+      <button type="button" className={styles.primaryBtn}>{children}</button>
+    </Link>
   )
 }

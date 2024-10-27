@@ -1,0 +1,136 @@
+@use "../../../../styles/common" as *;
+
+.topTitleContainer {
+    display: flex;
+    justify-content: center;
+    background-color: $color-primary;
+    height: 356px;
+    align-items: flex-end;
+    position: relative;
+    @include mq (900px) {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 40px 0;
+    }
+    .topImg__Left {
+        margin-right: 16px;
+    }
+    .topTitlebox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        align-self: center;
+        .beginnerContainer {
+            display: flex;
+            align-items: center;
+            border: solid 2px $color-correct;
+            border-radius: 8px;
+            background-color: $color-white;
+            padding: 8px 12px 8px 8px;
+            max-width: max-content;
+            align-self: flex-start;
+            margin-left: 64px;
+            @include mq (500px) {
+                margin: 0 auto;
+            }
+            .beginnerImg {
+                margin-top: 4px;
+            }
+            .beginnerText {
+                color: $color-correct;
+                font-size: $size-28;
+                font-weight: 800;
+                @include mq (500px) {
+                    font-size: $size-24;
+                }
+            }
+        }
+        .topTitle__sub {
+            color: $color-white;
+            margin-top: 8px;
+            .slash {
+                font-size: $size-20;
+            }
+            .subText {
+                font-size: $size-40;
+                font-weight: 800;
+                @include mq (500px) {
+                    font-size: $size-24;
+                }
+            }
+        }
+        .topTitle {
+            color: $color-white;
+            font-size: $size-65;
+            font-weight: 800;
+            padding-bottom: 64px;
+            @include mq (900px) {
+                padding-bottom: 0;
+            }
+            @include mq (500px) {
+                font-size: $size-44;
+            }
+        }
+    }
+    .topImg__Right {
+        margin-left: 16px;
+    }
+    @include mq (900px) {
+        .topImgContainer {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            .topImg__Left {
+                margin-right: -5px;
+                margin-left: 0;
+            }
+            .topImg__Right {
+                margin-right: -60px;
+                margin-left: 0;
+            }
+        }
+    }
+    .pageLinkList {
+        position: absolute;
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        top: 90%;
+        @include mq (900px) {
+            gap: 0;
+            width: 100%;
+            justify-content: center;
+            position: static;
+            margin-top: -20px;
+            padding: 0 16px;
+        }
+        .pageLinkItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: $color-white;
+            border: solid 1px $color-primary-30pct;
+            padding: 8px 32px;
+            width: 140px;
+            cursor: pointer;
+            @include mq (500px) {
+                flex: 1;
+                width: auto;
+                padding: 8px;
+            }
+            .itemText {
+                color: $color-primary;
+                font-size: $size-24;
+                font-weight: 800;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

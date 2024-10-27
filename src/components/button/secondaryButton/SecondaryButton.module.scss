@@ -1,5 +1,9 @@
 @use "../../../../styles/common" as *;
 
+.link {
+    text-decoration: none;
+}
+
 .secondaryBtn {
     @include btn($color-secondary, #AC1622);
 }

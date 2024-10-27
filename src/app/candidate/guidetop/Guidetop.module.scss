@@ -1,0 +1,67 @@
+@use "../../../../styles/common" as *;
+
+.sectionBackground {
+    background-color: $color-gray;
+}
+
+.topMargin {
+    margin: 120px auto;
+    background-color: $color-white;
+    border-radius: 8px;
+    .listText{
+        font-size: $size-14;
+        line-height: 1.75;
+        text-align: justify;
+        margin: 16px 0;
+        padding: 0 24px;
+    }
+    .detailContainer {
+        display: flex;
+        gap: 24px;
+        @include mq (900px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .detailText {
+            width: 100%;
+        }
+        .detailTitle {
+            color: $color-primary;
+            font-size: $size-20;
+            font-weight: 700;
+            padding-bottom: 16px;
+        }
+        .list {
+            list-style: none;
+            margin: 16px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .listText {
+                display: flex;
+                margin: 0;
+                .listMark__number {
+                    width: 24px;
+                    height: 24px;
+                    background-color: $color-primary;
+                    color: $color-white;
+                    font-family: 'Rubik', sans-serif;
+                    border-radius: 4px;
+                    display: inline-block;
+                    text-align: center;
+                    font-size: $size-14;
+                    font-weight: 400;
+                    margin-right: 8px;
+                    flex-shrink: 0;
+                }
+                .contentText {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.adjustMargin {
+    padding-top: 0;
+}

@@ -10,14 +10,26 @@ $color-gray: #F1F1F3;
 $color-border-gray: #D6D7DC;
 $color-open-light: #F1F7FF;
 $gradient-primary: linear-gradient(to right, #0C1438, #11296C);
+$color-correct: #2D7B68;
 
 /*font size*/
 $size-16: 1rem;
 $size-18: 1.125rem;
 $size-20: 1.25rem;
 $size-22: 1.375rem;
+$size-24: 1.5rem;
 $size-32: 2rem;
 $size-14: 0.875rem;
+$size-28: 1.75rem;
+$size-40: 2.5rem;
+$size-44: 2.75rem;
+$size-65: 4.0625rem;
+
+@mixin mq ($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
 
 @mixin btn($bg, $shadow) {
     background-color: $bg;
@@ -29,7 +41,7 @@ $size-14: 0.875rem;
     justify-content: center;
     cursor: pointer;
     width: 100%;
-    padding: 16px 0;
+    padding: 14px 0;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: $size-16;
     border-radius: 4px;
@@ -48,10 +60,10 @@ $size-14: 0.875rem;
     margin: 0 auto;
 }
 
-
 /*h1 section*/
 .titleContainer {
     background-color: $color-white;
+    padding-bottom: 4px;
 }
 
 /*h1 title*/
@@ -86,10 +98,9 @@ $size-14: 0.875rem;
     background-color: $color-white;
     padding: 40px;
     border-radius: 8px;
-}
-
-.contentsBox {
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 /*h2 title*/
@@ -139,17 +150,4 @@ $size-14: 0.875rem;
     height: 1px;
     background-color: $color-border-gray;
     display: block;
-}
-
-/* button Container*/
-.buttonContainer {
-    max-width: 1024px;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    background-color: $color-gray;
-    .buttonText {
-        padding: 4px 4px 0;
-    }
 }
