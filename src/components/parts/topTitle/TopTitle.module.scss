@@ -108,11 +108,6 @@
             padding: 0 16px;
         }
         .pageLinkItem {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
             background-color: $color-white;
             border: solid 1px $color-primary-30pct;
             padding: 8px 32px;
@@ -123,14 +118,23 @@
                 width: auto;
                 padding: 8px;
             }
-            .itemText {
-                color: $color-primary;
-                font-size: $size-24;
-                font-weight: 800;
-                text-align: center;
+            .link {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                text-decoration: none;
+                .itemText {
+                    color: $color-primary;
+                    font-size: $size-24;
+                    font-weight: 800;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                }
             }
+
         }
     }
 }

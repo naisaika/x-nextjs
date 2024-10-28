@@ -83,6 +83,7 @@ $size-65: 4.0625rem;
 
 .contentsContainer {
     background-color: $color-gray;
+    padding: 40px 16px;
 }
 
 .topImg {
@@ -124,6 +125,7 @@ $size-65: 4.0625rem;
 /*contents wrapper*/
 .contentsWrapper {
     padding: 0 24px;
+    margin: 0 auto;
 }
 
 /* contents image*/

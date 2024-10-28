@@ -8,6 +8,9 @@
     margin: 120px auto;
     background-color: $color-white;
     border-radius: 8px;
+    @include mq (900px) {
+        margin: 0 auto;
+    }
     .listText{
         font-size: $size-14;
         line-height: 1.75;

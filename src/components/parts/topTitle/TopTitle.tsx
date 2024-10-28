@@ -3,21 +3,40 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import styles from "./TopTitle.module.scss";
+import Link from 'next/link';
+import { PageLinkType } from '@/app/candidate/guide-top/page';
 
-interface PageLinkType {
-    id: number;
-    img: string;
-    text: string;
-    text2: string;
-}
+// interface PageLinkType {
+//     id: number;
+//     img: string;
+//     text: string;
+//     text2: string;
+//     anchorlink: string;
+// }
   
-const PAGE_LINKS: PageLinkType[] = [
-    { id: 0, img: "/contents-img/guidetop/document.png", text:"履歴書", text2:"書き方"},
-    { id: 1, img: "/contents-img/guidetop/bag.png", text:"職務", text2:"経歴書"},
-    { id: 2, img: "/contents-img/guidetop/person.png", text:"面接", text2:"対策"}
-]
+// const PAGE_LINKS: PageLinkType[] = [
+//     { id: 0, 
+//       img: "/contents-img/guidetop/document.png", 
+//       text:"履歴書", 
+//       text2:"書き方", 
+//       anchorlink: "resume-top"},
+//     { id: 1, 
+//       img: "/contents-img/guidetop/bag.png",
+//       text:"職務",
+//       text2:"経歴書",
+//       anchorlink: "workExperience-top"},
+//     { id: 2,
+//       img: "/contents-img/guidetop/person.png",
+//       text:"面接",
+//       text2:"対策",
+//       anchorlink: "interview-top"}
+// ]
 
-const TopTitle = () => {
+interface PageLinksProps {
+  pageLinks: PageLinkType[];
+}
+
+const TopTitle = ({pageLinks}: PageLinksProps) => {
 
   const [isResponsive, setIsResponsive] = useState<boolean>(false);
 
@@ -35,6 +54,30 @@ const TopTitle = () => {
     window.addEventListener("resize", handleResize);
     
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+
+    const scrollLinks = document.querySelectorAll('a[href^="#"]');
+    scrollLinks.forEach((scrollLink) => {
+      scrollLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        
+        const hrefLink = scrollLink.getAttribute("href");
+        if (!hrefLink) return;  
+  
+        const targetContent = document.getElementById(hrefLink.replace("#", ""));
+        if (!targetContent) return; 
+  
+        const rectTop = targetContent.getBoundingClientRect().top;
+        const positionY = window.scrollY;
+        const target = rectTop + positionY;
+        window.scrollTo({
+          top: target,
+          behavior: "smooth",
+        });
+      });
+    });
   }, []);
 
   return (
@@ -78,14 +121,16 @@ const TopTitle = () => {
           </Image>
         </div>
         <ul className={styles.pageLinkList}>
-          {PAGE_LINKS.map((link) => (
+          {pageLinks.map((link) => (
             <li key={link.id} className={styles.pageLinkItem}>
-              <Image src={link.img} alt="アイコン画像" width={24} height={24} priority></Image>
-              <p className={styles.itemText}>
-                <span>{link.text}</span>
-                <span>{link.text2}</span>
-              </p>
-              <Image src="/contents-img/guidetop/down.png" alt="アイコン画像" width={24} height={24} priority></Image>
+              <Link href={`#${link.anchorlink}`} className={styles.link} >
+                <Image src={link.img} alt="アイコン画像" width={24} height={24} priority></Image>
+                <p className={styles.itemText}>
+                  <span>{link.text}</span>
+                  <span>{link.text2}</span>
+                </p>
+                <Image src="/contents-img/guidetop/down.png" alt="アイコン画像" width={24} height={24} priority></Image>
+              </Link>
             </li>
           ))}
         </ul>
@@ -119,14 +164,16 @@ const TopTitle = () => {
         <h1 className={styles.topTitle}>就活完全ガイド</h1>
       </div>
       <ul className={styles.pageLinkList}>
-        {PAGE_LINKS.map((link) => (
+        {pageLinks.map((link) => (
           <li key={link.id} className={styles.pageLinkItem}>
-            <Image src={link.img} alt="アイコン画像" width={24} height={24} priority></Image>
-            <p className={styles.itemText}>
-              <span>{link.text}</span>
-              <span>{link.text2}</span>
-            </p>
-            <Image src="/contents-img/guidetop/down.png" alt="アイコン画像" width={24} height={24} priority></Image>
+            <Link href={`#${link.anchorlink}`} className={styles.link} >
+              <Image src={link.img} alt="アイコン画像" width={24} height={24} priority></Image>
+              <p className={styles.itemText}>
+                <span>{link.text}</span>
+                <span>{link.text2}</span>
+              </p>
+              <Image src="/contents-img/guidetop/down.png" alt="アイコン画像" width={24} height={24} priority></Image>
+            </Link>
           </li>
         ))}
       </ul>
