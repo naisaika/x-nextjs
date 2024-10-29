@@ -1,9 +1,10 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { GUIDE_DATA, GUIDE_SECTION_CONTENTS } from '@/data/data';
 import styles from "./Guide03.module.scss";
 import Image from 'next/image';
 import { SubTitle } from '@/components/parts/subtitle/SubTitle';
-import { ContentsList } from '@/components/parts/contentsList/ContentsList';
+// import { ContentsList } from '@/components/parts/contentsList/ContentsList';
 import { ResearchCompany } from '@/components/subTitleContents/guide03/researchCompany/ResearchCompany';
 import { ResearchMyself } from '@/components/subTitleContents/guide03/reserchMyself/ResearchMyself';
 import { CheckDocuments } from '@/components/subTitleContents/guide03/checkDocuments/CheckDocuments';
@@ -12,6 +13,8 @@ import { BuildConfidence } from '@/components/subTitleContents/guide03/buildConf
 import { RelativePageSection } from '@/components/parts/relativePageSection/RelativePageSection';
 import { CheckAppearance } from '@/components/subTitleContents/guide03/checkAppearance/CheckAppearance';
 import { ButtonContainer } from '@/components/parts/buttonContainer/ButtonContainer';
+
+const DynamicContentsList = dynamic(() => import('../../../components/parts/contentsList/ContentsList'));
 
 const SECTION_ID = 2;
 const sectionData = GUIDE_DATA.find((title) => title.id === SECTION_ID);
@@ -40,7 +43,8 @@ const Guide03 = () => {
           <div className={styles.contentsSection}>
             <div>
               <SubTitle>目次</SubTitle>
-              <ContentsList sectionId={SECTION_ID}/>
+              {/* <ContentsList sectionId={SECTION_ID}/> */}
+              <DynamicContentsList sectionId={SECTION_ID}/>
             </div>
             {sectionContents?.contents.map((content, index) => (
               <div key={content.id} className={styles.contentsBox} id={content.anchorlink}>

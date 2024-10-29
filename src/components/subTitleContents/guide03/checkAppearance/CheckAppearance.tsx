@@ -46,13 +46,19 @@ export const CheckAppearance = () => {
 
             return (
                 <div key={list.id}>
-                <ContentsTitle>{list.title}</ContentsTitle>
-                <div className={styles.line}></div>
-                <div className={styles.listContents}>
-                    <Image src={list.img} alt="身だしなみ画像" width={460} height={264} priority></Image>
-                    {listText?.text}
+                    <ContentsTitle>{list.title}</ContentsTitle>
+                    <div className={styles.line}></div>
+                    <div className={styles.listContents}>
+                        <Image 
+                            src={list.img} 
+                            alt="身だしなみ画像" 
+                            width={460} height={264} priority
+                            className={styles.listImg}
+                        >
+                        </Image>
+                        {listText?.text}
+                    </div>
                 </div>
-            </div>
             )
         })}
     </div>

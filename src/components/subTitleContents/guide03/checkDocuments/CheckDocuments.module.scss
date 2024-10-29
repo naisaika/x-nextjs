@@ -3,7 +3,14 @@
 .list {
     list-style: none;
     display: flex;
-    gap: 24px;
+    gap: 20px;
+    margin-bottom: 56px;
+    @include mq (1024px) {
+        flex-wrap: wrap;
+    }
+    @include mq (675px) {
+        justify-content: center;
+    }
     .listTitle {
         font-size: $size-18;
         font-weight: 700;
@@ -11,6 +18,10 @@
     }
     .listImg {
         cursor: pointer;
+        @include mq (370px) {
+            width: 100%;
+            height: auto;
+        }
     }
     .listText {
         font-size: $size-14;

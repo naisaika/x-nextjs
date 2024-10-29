@@ -58,6 +58,7 @@ $size-65: 4.0625rem;
 .wrapper {
     max-width: 1024px;
     margin: 0 auto;
+    padding: 0 16px;
 }
 
 /*h1 section*/
@@ -74,6 +75,9 @@ $size-65: 4.0625rem;
     -webkit-text-fill-color: transparent;
     font-size: $size-32;
     font-weight: 900;
+    @include mq (768px) {
+        font-size: $size-24;
+    }
 }
 
 .sectionDescription {
@@ -83,15 +87,17 @@ $size-65: 4.0625rem;
 
 .contentsContainer {
     background-color: $color-gray;
-    padding: 40px 16px;
+    padding: 40px 0;
 }
 
 .topImg {
     display: block;
     margin: 0 auto;
     padding: 40px 0;
-    width: 50%;
     height: auto;
+    @include mq (520px) {
+        width: 95%;
+    }
 }
 
 /*contents Section*/
@@ -102,6 +108,9 @@ $size-65: 4.0625rem;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    @include mq (768px) {
+        padding: 24px 16px; 
+    }
 }
 
 /*h2 title*/
@@ -115,6 +124,9 @@ $size-65: 4.0625rem;
     font-size: $size-20;
     display: flex;
     align-items: center;
+    @include mq (500px) {
+        font-size: $size-18;
+    }
 }
 
 /*h2 title elements*/
@@ -126,15 +138,37 @@ $size-65: 4.0625rem;
 .contentsWrapper {
     padding: 0 24px;
     margin: 0 auto;
+    @include mq (768px) {
+        padding: 0 8px;
+    }
 }
 
 /* contents image*/
 .imgContainer {
-   text-align: center;
-   margin-top: 16px;
+    display: block;
+    margin: 0 auto;
+    padding: 16px 0;
+    height: auto;
+    text-align: center;
+    max-width: 580px;
     .subImg {
-        width: 50%;
+        width: 100%;
         height: auto;
+    }
+}
+
+/* contents text */
+.contentsList {
+    list-style: none;
+    .contentsText {
+        font-size: $size-14;
+        padding: 16px 24px;
+        line-height: 1.75;
+        font-weight: 400;
+        text-align: justify;
+        @include mq (768px) {
+            padding: 16px 8px;
+        }
     }
 }
 

@@ -4,4 +4,13 @@
     display: flex;
     gap: 24px;
     margin: 16px 0;
+    @include mq (1024px) {
+        flex-wrap: wrap;
+    }
+    .listImg {
+        @include mq (520px) {
+            width: 100%;
+            height: auto;
+        }
+    }
 }

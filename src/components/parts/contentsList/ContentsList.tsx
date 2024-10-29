@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import React, { useEffect } from 'react';
 import { GUIDE_SECTION_CONTENTS } from '@/data/data';
 import { ListMarkNumber } from '@/components/parts/listMark/listMarkNumber/ListMarkNumber';
@@ -10,7 +12,7 @@ interface sectionIdProps {
   sectionId: number;
 }
 
-export const ContentsList = ({ sectionId }: sectionIdProps) => {
+const ContentsList = ({ sectionId }: sectionIdProps) => {
 
   useEffect(() => {
 
@@ -51,3 +53,5 @@ export const ContentsList = ({ sectionId }: sectionIdProps) => {
     </ul>
   );
 };
+
+export default ContentsList;

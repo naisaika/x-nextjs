@@ -7,7 +7,7 @@ import styles from "./ButtonContainer.module.scss";
 export const ButtonContainer = () => {
   return (
     <div className={styles.buttonContainer}>
-        <PrimaryButton link={"/candidate/guidetop"}>
+        <PrimaryButton link={"/candidate/guide-top"}>
           <span className={styles.buttonText}>就活完全ガイドTOP</span>
           <Image src="/list-mark/right.png" alt="ボタンアイコン" width={24} height={24} priority></Image>
         </PrimaryButton>
