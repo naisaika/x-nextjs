@@ -56,7 +56,7 @@ export const CheckAppearance = () => {
                             className={styles.listImg}
                         >
                         </Image>
-                        {listText?.text}
+                        <span className={styles.listText}>{listText?.text}</span>
                     </div>
                 </div>
             )

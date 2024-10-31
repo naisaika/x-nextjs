@@ -108,30 +108,34 @@
         top: 90%;
         @include mq (900px) {
             gap: 0;
-            width: 100%;
             justify-content: center;
             position: static;
             margin-top: -20px;
             padding: 0 16px;
         }
-        .pageLinkItem {
-            background-color: $color-white;
-            border: solid 1px $color-primary-30pct;
-            padding: 8px 32px;
-            width: 140px;
+        @include mq (500px) {
+            width: 100%;
+        }
+        .link {
             cursor: pointer;
-            @include mq (500px) {
-                flex: 1;
-                width: auto;
-                padding: 8px;
-            }
-            .link {
+            text-decoration: none;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            .pageLinkItem {
+                background-color: $color-white;
+                border: solid 1px $color-primary-30pct;
+                padding: 8px 32px;
+                width: 140px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 gap: 8px;
-                text-decoration: none;
+                @include mq (500px) {
+                    width: 100%;
+                    padding: 8px;
+                }
                 .itemText {
                     color: $color-primary;
                     font-size: $size-24;

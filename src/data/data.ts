@@ -202,6 +202,7 @@ export const GUIDE_SECTION_CONTENTS: GuideSectionType[] = [
 
  export interface H3TitleType {
     id: number;
+    titleNum?: string;
     title: string;
   }
 

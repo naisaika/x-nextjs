@@ -6,10 +6,10 @@ import { QUESTION_TEXT } from './questionText/QuestionText';
 import { H3TitleType } from '@/data/data';
 
 const H3_TITLE: H3TitleType[] = [
-  { id: 0, title: "①自己PR" },
-  { id: 1, title: "②転職理由" },
-  { id: 2, title: "③志望動機" },
-  { id: 3, title: "④将来のビジョン" },
+  { id: 0, titleNum: "①", title: "自己PR" },
+  { id: 1, titleNum: "②", title: "転職理由" },
+  { id: 2, titleNum: "③", title: "志望動機" },
+  { id: 3, titleNum: "④", title: "将来のビジョン" },
 ]
 
 export const FrequentQuestion = () => {
@@ -33,7 +33,10 @@ export const FrequentQuestion = () => {
 
               return (
                 <li key={title.id}>
-                    <ContentsTitle>{title.title}</ContentsTitle>
+                    <ContentsTitle>
+                      <span>{title.titleNum}</span>
+                      <span>{title.title}</span>
+                    </ContentsTitle>
                     <div className={styles.line}></div>
                     <div className={styles.textContainer}>{questionText?.text}</div>
                 </li>

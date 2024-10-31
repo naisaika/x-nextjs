@@ -7,7 +7,13 @@
     background-color: $color-tertiary-30pct;
     padding: 16px;
     border-radius: 8px;
-    margin: 0 88px;
+    margin: 0 80px;
+    @include mq (768px) {
+        margin: 0;
+    }
+    @include mq (376px) {
+        padding: 16px 16px 16px 8px;
+    }
     .attentionText {
         color: $color-secondary;
         font-size: $size-14;

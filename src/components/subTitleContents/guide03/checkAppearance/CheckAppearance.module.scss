@@ -6,8 +6,13 @@
     margin: 16px 0;
     @include mq (1024px) {
         flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 0 8px;
     }
     .listImg {
+        @include mq (1024px) {
+            margin: 0 auto;
+        }
         @include mq (520px) {
             width: 100%;
             height: auto;

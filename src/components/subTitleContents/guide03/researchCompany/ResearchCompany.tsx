@@ -7,8 +7,8 @@ import { H3TitleType } from '@/data/data';
 import { CheckListType } from '@/data/data';
 
 const H3_TITLE: H3TitleType[] = [
-    { id: 0, title: "①企業理解を深める" },
-    { id: 1, title: "②職場の雰囲気を知る" },
+    { id: 0, titleNum: "①", title: "企業理解を深める" },
+    { id: 1, titleNum: "②", title: "職場の雰囲気を知る" },
 ]
 
 const CHECK_LISTS: CheckListType[] = [
@@ -34,7 +34,10 @@ export const ResearchCompany = () => {
         <ul className={styles.contentsList}>
             {H3_TITLE.map((title) => (
                 <li key={title.id}>
-                    <ContentsTitle>{title.title}</ContentsTitle>
+                    <ContentsTitle>
+                        <span>{title.titleNum}</span>
+                        <span>{title.title}</span>
+                    </ContentsTitle>
                     <div className={styles.line}></div>
                     {title.id === 0 && 
                         <>

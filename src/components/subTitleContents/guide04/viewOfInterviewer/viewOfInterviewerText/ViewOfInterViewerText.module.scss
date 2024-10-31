@@ -6,4 +6,7 @@
     text-align: justify;
     margin: 16px 0;
     padding: 0 24px;
+    @include mq (768px) {
+        padding: 0 8px;
+    }
 }

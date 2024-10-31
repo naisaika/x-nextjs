@@ -6,8 +6,8 @@ import { H3TitleType } from '@/data/data';
 import { FlagContentsContainer } from '@/components/parts/flagContentsContainer/FlagContentsContainer';
 
 const H3_TITLE: H3TitleType[] = [
-    { id: 0, title: "①強み・弱み" },
-    { id: 1, title: "②志望動機の整理" },
+    { id: 0, titleNum: "①", title: "強み・弱み" },
+    { id: 1, titleNum: "②", title: "志望動機の整理" },
 ]
 
 export const ResearchMyself = () => {
@@ -27,7 +27,10 @@ export const ResearchMyself = () => {
     <ul className={styles.contentsList}>
         {H3_TITLE.map((title) => (
             <li key={title.id}>
-                <ContentsTitle>{title.title}</ContentsTitle>
+                    <ContentsTitle>
+                        <span>{title.titleNum}</span>
+                        <span>{title.title}</span>
+                    </ContentsTitle>
                 <div className={styles.line}></div>
                 {title.id === 0 && 
                     <p className={styles.contentsText}>

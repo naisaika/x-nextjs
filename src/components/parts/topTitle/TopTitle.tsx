@@ -96,16 +96,16 @@ const TopTitle = ({ pageLinks }: PageLinksProps) => {
         </div>
         <ul className={styles.pageLinkList}>
           {pageLinks.map((link) => (
-            <li key={link.id} className={styles.pageLinkItem}>
-              <Link href={`#${link.anchorlink}`} className={styles.link} >
+            <Link href={`#${link.anchorlink}`} className={styles.link} key={link.id}>
+              <li  className={styles.pageLinkItem}>
                 <Image src={link.img} alt="アイコン画像" width={24} height={24} priority></Image>
                 <p className={styles.itemText}>
                   <span>{link.text}</span>
                   <span>{link.text2}</span>
                 </p>
                 <Image src="/contents-img/guidetop/down.png" alt="アイコン画像" width={24} height={24} priority></Image>
-              </Link>
-            </li>
+              </li>
+            </Link>
           ))}
         </ul>
       </>
@@ -141,16 +141,16 @@ const TopTitle = ({ pageLinks }: PageLinksProps) => {
         </div>
         <ul className={styles.pageLinkList}>
           {pageLinks.map((link) => (
-            <li key={link.id} className={styles.pageLinkItem}>
-              <Link href={`#${link.anchorlink}`} className={styles.link} >
+            <Link href={`#${link.anchorlink}`} className={styles.link} key={link.id}>
+              <li  className={styles.pageLinkItem}>
                 <Image src={link.img} alt="アイコン画像" width={24} height={24} priority></Image>
                 <p className={styles.itemText}>
                   <span>{link.text}</span>
                   <span>{link.text2}</span>
                 </p>
                 <Image src="/contents-img/guidetop/down.png" alt="アイコン画像" width={24} height={24} priority></Image>
-              </Link>
-            </li>
+              </li>
+            </Link>
           ))}
         </ul>
         <Image 

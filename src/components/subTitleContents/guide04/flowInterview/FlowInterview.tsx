@@ -19,8 +19,8 @@ interface PointTitleType {
 }
 
 const H3_TITLE: H3TitleType[] = [
-    { id: 0, title: "①入室から退室までをイメージしましょう" },
-    { id: 1, title: "②面接で気になるあれこれ" },
+    { id: 0, titleNum: "①", title: "入室から退室までをイメージしましょう" },
+    { id: 1, titleNum: "②", title: "面接で気になるあれこれ" },
 ]
 
 const FLOW_LISTS: FlowListType[] = [
@@ -73,7 +73,10 @@ export const FlowInterview = () => {
         <ul className={styles.contentsList}>
             {H3_TITLE.map((title) => (
                 <li key={title.id}>
-                    <ContentsTitle>{title.title}</ContentsTitle>
+                    <ContentsTitle>
+                        <span>{title.titleNum}</span>
+                        <span>{title.title}</span>
+                    </ContentsTitle>
                     <div className={styles.line}></div>
                     {title.id === 0 && 
                         <>

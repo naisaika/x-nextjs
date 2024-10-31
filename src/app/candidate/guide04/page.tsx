@@ -4,7 +4,6 @@ import { GUIDE_DATA, GUIDE_SECTION_CONTENTS } from '@/data/data';
 import Image from 'next/image';
 import styles from "./Guide04.module.scss";
 import { SubTitle } from '@/components/parts/subtitle/SubTitle';
-// import { ContentsList } from '@/components/parts/contentsList/ContentsList';
 import { FlowInterview } from '@/components/subTitleContents/guide04/flowInterview/FlowInterview';
 import { FrequentQuestion } from '@/components/subTitleContents/guide04/frequentQuestion/FrequentQuestion';
 import { Technique } from '@/components/subTitleContents/guide04/technique/Technique';
@@ -41,7 +40,6 @@ const Guide04 = () => {
             )}
           <div className={styles.contentsSection}>
             <SubTitle>目次</SubTitle>
-            {/* <ContentsList sectionId={SECTION_ID}/> */}
             <DynamicContentsList sectionId={SECTION_ID}/>
             {sectionContents?.contents.map((content, index) => (
               <div key={content.id} id={content.anchorlink}>

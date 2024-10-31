@@ -6,8 +6,8 @@ import { H3TitleType } from '@/data/data';
 import { CheckListType } from '@/data/data';
 
 const H3_TITLE: H3TitleType[] = [
-  { id: 0, title: "①自己評価" },
-  { id: 1, title: "②次回への準備" }
+  { id: 0, titleNum: "①", title: "自己評価" },
+  { id: 1, titleNum: "②", title: "次回への準備" }
 ]
 
 const CHECK_LISTS: CheckListType[] = [
@@ -38,7 +38,10 @@ export const Imporovement = () => {
 
               return (
                 <li key={title.id}>
-                    <ContentsTitle>{title.title}</ContentsTitle>
+                    <ContentsTitle>
+                        <span>{title.titleNum}</span>
+                        <span>{title.title}</span>
+                    </ContentsTitle>
                     <div className={styles.line}></div>
                     {title.id === 0 &&
                     <>

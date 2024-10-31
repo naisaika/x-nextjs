@@ -9,7 +9,7 @@ interface ChildrenProps {
 
 export const PrimaryButton = ({link = "#", children}: ChildrenProps) => {
   return (
-    <Link href={link} className={styles.link}>
+    <Link href={link} className={styles.link} prefetch={true}>
       <button type="button" className={styles.primaryBtn}>{children}</button>
     </Link>
   )

@@ -4,4 +4,7 @@
     font-size: $size-14;
     line-height: 1.75;
     text-align: justify;
+    // @include mq (1024px) {
+    //     padding: 0 8px;
+    // }
 }

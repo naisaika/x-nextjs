@@ -4,7 +4,6 @@ import { GUIDE_DATA, GUIDE_SECTION_CONTENTS } from '@/data/data';
 import styles from "./Guide03.module.scss";
 import Image from 'next/image';
 import { SubTitle } from '@/components/parts/subtitle/SubTitle';
-// import { ContentsList } from '@/components/parts/contentsList/ContentsList';
 import { ResearchCompany } from '@/components/subTitleContents/guide03/researchCompany/ResearchCompany';
 import { ResearchMyself } from '@/components/subTitleContents/guide03/reserchMyself/ResearchMyself';
 import { CheckDocuments } from '@/components/subTitleContents/guide03/checkDocuments/CheckDocuments';
@@ -43,7 +42,6 @@ const Guide03 = () => {
           <div className={styles.contentsSection}>
             <div>
               <SubTitle>目次</SubTitle>
-              {/* <ContentsList sectionId={SECTION_ID}/> */}
               <DynamicContentsList sectionId={SECTION_ID}/>
             </div>
             {sectionContents?.contents.map((content, index) => (

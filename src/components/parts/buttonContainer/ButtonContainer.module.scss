@@ -8,7 +8,10 @@
     flex-direction: column;
     gap: 24px;
     background-color: $color-gray;
+    @include mq (1024px) {
+        margin: 40px 16px;
+    }
     .buttonText {
-        padding: 4px 4px 0;
+        padding: 0 4px;
     }
 }

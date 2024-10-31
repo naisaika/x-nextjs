@@ -1,5 +1,3 @@
-// "use client";
-
 import React from 'react';
 import { GUIDE_DATA, GUIDE_SECTION_CONTENTS } from '@/data/data';
 import styles from "./Guidetop.module.scss";
@@ -7,11 +5,7 @@ import Image from 'next/image';
 import { SubTitle } from '@/components/parts/subtitle/SubTitle';
 // import { ListMarkNumber } from '@/components/parts/listMark/listMarkNumber/ListMarkNumber';
 import { PrimaryButton } from '@/components/button/primaryButton/PrimaryButton';
-// import TopTitle from '@/components/parts/topTitle/TopTitle';
 import dynamic from 'next/dynamic';
-// import { Suspense } from "react"
-
-// export const experimental_ppr = true
 
 export interface PageLinkType {
   id: number;
@@ -39,19 +33,12 @@ const PAGE_LINKS: PageLinkType[] = [
     anchorlink: "interview-top"}
 ]
 
-// const TopTitleContainer = dynamic(() => import("../../../components/parts/topTitle/TopTitle"), {
-//   ssr: false,
-// });
-
 const TopTitleContainer = dynamic(() => import("../../../components/parts/topTitle/TopTitle"));
 
 const GuideTop = () => {
   return (
     <section className={`${styles.section} ${styles.sectionBackground}`}>
-      {/* <Suspense fallback="loading"> */}
-        <TopTitleContainer pageLinks={PAGE_LINKS}/>
-      {/* </Suspense> */}
-      {/* <TopTitle pageLinks={PAGE_LINKS}/> */}
+      <TopTitleContainer pageLinks={PAGE_LINKS}/>
       <div className={`${styles.wrapper} ${styles.topMargin}`}>
         {GUIDE_DATA.map((data) => {
           const link = PAGE_LINKS.find((link) => link.id === data.id);

@@ -3,17 +3,13 @@ import styles from "./Technique.module.scss";
 import { ContentsTitle } from '@/components/parts/contentsTitle/ContentsTitle';
 import { TECHNIQUE_TEXT } from './techniqueText/TechniqueText';
 import Image from 'next/image';
-
-interface H3TitleType {
-  id: number;
-  title: string;
-}
+import { H3TitleType } from '@/data/data';
 
 const H3_TITLE: H3TitleType[] = [
-  { id: 0, title: "①話し方" },
-  { id: 1, title: "②非言語コミュニケーション" },
-  { id: 2, title: "③質問への応答" },
-  { id: 3, title: "④逆質問の準備" },
+  { id: 0, titleNum: "①", title: "話し方" },
+  { id: 1, titleNum: "②", title: "非言語コミュニケーション" },
+  { id: 2, titleNum: "③", title: "質問への応答" },
+  { id: 3, titleNum: "④", title: "逆質問の準備" },
 ]
 
 export const Technique = () => {
@@ -37,7 +33,10 @@ export const Technique = () => {
 
               return (
                 <li key={title.id}>
-                    <ContentsTitle>{title.title}</ContentsTitle>
+                    <ContentsTitle>
+                      <span>{title.titleNum}</span>
+                      <span>{title.title}</span>
+                    </ContentsTitle>
                     <div className={styles.line}></div>
                     <div className={styles.textContainer}>{techniqueText?.text}</div>
                 </li>

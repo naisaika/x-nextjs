@@ -8,6 +8,9 @@
         padding: 0 24px;
         line-height: 1.75;
         text-align: justify;
+        @include mq (768px) {
+            padding: 0 8px;
+        }
     }
     .list {
         list-style: none;
@@ -15,6 +18,9 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
+        @include mq (500px) {
+            padding: 16px;
+        }
         .listItem {
             display: flex;
             align-items: center;
