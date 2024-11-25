@@ -95,7 +95,7 @@ const GuideTop = () => {
                   </ol>
                 </div>
               </div>
-              <PrimaryButton link={data.link || "#"}>
+              <PrimaryButton link={data.link}>
                 <span className={styles.buttonText}>{data.topText}</span>
                 <Image src="/list-mark/right.png" alt="ボタンアイコン" width={24} height={24} priority></Image>
               </PrimaryButton>
