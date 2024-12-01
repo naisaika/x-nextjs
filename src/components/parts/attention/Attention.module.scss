@@ -3,11 +3,13 @@
 .attentionContainer {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     background-color: $color-tertiary-30pct;
     padding: 16px;
     border-radius: 8px;
-    margin: 0 80px;
+    margin: 0 auto;
+    width: max-content;
     @include mq (768px) {
         margin: 0;
     }

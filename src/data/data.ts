@@ -83,11 +83,21 @@ export const GUIDE_SECTION_CONTENTS: GuideSectionType[] = [
             },
             { 
                 id: 4, 
+                contentsTitle: "誤字や脱字の正しい修正方法", 
+                anchorlink: "revisedResume"
+            },
+            { 
+                id: 5, 
+                contentsTitle: "採用担当者が重視するポイント", 
+                anchorlink: "recruitPoint"
+            },
+            { 
+                id: 6, 
                 contentsTitle: "履歴書作成時に気を付けること", 
                 anchorlink: "resumePoint"
             },
             { 
-                id: 5, 
+                id: 7, 
                 contentsTitle: "履歴書に関するQ&A",
                 anchorlink: "resumeQA"
             }
@@ -114,18 +124,48 @@ export const GUIDE_SECTION_CONTENTS: GuideSectionType[] = [
             },
             { 
                 id: 3,
-                contentsTitle: "職務経歴書の作成のための事前準備" ,
-                anchorlink: "workExperiencePrepare"
+                contentsTitle: "手書きとパソコンどちらが適切？",
+                anchorlink: "handOrInput"
             },
             { 
-                id: 4, 
+                id: 4,
+                contentsTitle: "職務経歴書の作成のための事前準備" ,
+                anchorlink: "PrepareWorkExperience"
+            },
+            { 
+                id: 5, 
                 contentsTitle: "職務経歴書の書き方・ポイント",
                 anchorlink: "workExperiencePoint"
             },
             { 
-                id: 5, 
+                id: 6, 
+                contentsTitle: "退職理由の書き方",
+                anchorlink: "reasonResignation"
+            },
+            { 
+                id: 7, 
+                contentsTitle: "転職回数が多い場合",
+                anchorlink: "careerChangeCount"
+            },
+            { 
+                id: 8, 
+                contentsTitle: "職歴に空白期間がある場合",
+                anchorlink: "blanckCareer"
+            },
+            { 
+                id: 9, 
+                contentsTitle: "誤字や脱字の正しい修正方法", 
+                anchorlink: "revisedWorkExperience"
+            },
+            { 
+                id: 10, 
+                contentsTitle: "採用担当者が重視するポイント", 
+                anchorlink: "recruitPoint"
+            },
+            { 
+                id: 11, 
                 contentsTitle: "職務経歴書の送付方法",
-                anchorlink: "workExperienceSend"
+                anchorlink: "howToSend"
             }
         ]
     },
@@ -212,3 +252,116 @@ export interface CheckListType {
     id: number;
     contents: string;
 }
+
+/* editor-comment type*/
+
+export interface EditorCommentType {
+    id: number;
+    section: string;
+    text: string;
+    link?: string;
+    text2?: string;
+}
+
+export const EDITOR_COMMENTS: EditorCommentType[] = [
+    { 
+        id: 0, 
+        section: "guide01",
+        text: "書き方のポイントを押さえればどなたでも作成できます！"
+    },
+    { 
+        id: 1, 
+        section: "guide01",
+        text: "今までの経験やスキルで募集要件とマッチしている内容は、欠かさず記載しましょう。"
+    },
+    { 
+        id: 2, 
+        section: "guide02",
+        text: "職務経歴書は、通常A4用紙2枚となるケースが多いためパソコン作成の方が編集しやすく、誤字・脱字の修正も手早くできるためおすすめです！"
+    },
+    { 
+        id: 3, 
+        section: "guide02",
+        text: "逆に社会人経験が浅い場合は、1枚でまとめても問題ありません。"
+    },
+    { 
+        id: 4, 
+        section: "guide02",
+        text: "もし「転職回数が多い」「職歴の空白期間が多い」ことで悩む方は",
+        link: "こちらの内容。",
+        text2: "を参考にしてください。"
+    },
+    { 
+        id: 5, 
+        section: "guide02",
+        text: "転職理由や目的について企業が不安にならないように前向きな内容を記載しましょう。"
+    },
+    { 
+        id: 6, 
+        section: "guide02",
+        text: "経歴詐称とならないよう嘘はつかず、正直に正しい情報を記入することが大切です。"
+    },
+    { 
+        id: 7, 
+        section: "guide02",
+        text: "採用担当者が「社風とマッチし、長く働いてくれそうだ」と感じてもらえるよう自己分析をしっかりと行い、企業の求める人材に合わせた強みを記載しましょう！"
+    },
+]
+
+/* resume-point type*/
+
+export interface ResumePointType {
+    id: number;
+    title: string;
+    img: string;
+    width: number;
+    height: number;
+}
+
+export const RESUME_POINTS: ResumePointType[] = [
+    { 
+        id: 0, 
+        title: "1）基本情報欄の書き方",
+        img: "/contents-img/guide01/resume1.jpg",
+        width: 460,
+        height: 292
+    },
+    { 
+        id: 1, 
+        title: "2）学歴・職歴欄の書き方",
+        img: "/contents-img/guide01/resume2.jpg",
+        width: 460,
+        height: 393
+    },
+
+    { 
+        id: 2, 
+        title: "3）免許・資格欄の書き方",
+        img: "/contents-img/guide01/resume3.jpg",
+        width: 460,
+        height: 232
+    },
+
+    { 
+        id: 3, 
+        title: "4）志望動機・通勤時間欄の書き方",
+        img: "/contents-img/guide01/resume4.jpg",
+        width: 460,
+        height: 246
+    },
+
+    { 
+        id: 4, 
+        title: "5）本人希望欄の書き方",
+        img: "/contents-img/guide01/resume5.jpg",
+        width: 460,
+        height: 131
+    },
+    { 
+        id: 5, 
+        title: "6）趣味・特技欄の書き方",
+        img: "/contents-img/guide01/resume6.jpg",
+        width: 460,
+        height: 121
+    }
+]

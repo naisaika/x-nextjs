@@ -1,0 +1,23 @@
+@use "../../../../../styles/common" as *;
+
+.templateTable {
+    padding: 16px 0 56px;
+    border-spacing: 0;
+    .tableRow {
+        display: flex;
+        border-top: solid 1px $color-primary;
+        .lastTable {
+            border-bottom: solid 1px $color-primary;
+        }
+        .tableTitle {
+            background-color: $color-primary-10pct;
+            padding: 36px 32px;
+            color: $color-primary;
+            font-weight: 600;
+            font-size: $size-16;
+        }
+        .tableContents {
+            padding: 36px 32px;
+        }
+    }
+}

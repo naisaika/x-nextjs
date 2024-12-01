@@ -1,0 +1,9 @@
+@use "../../../../styles/common" as *;
+
+.primaryBtn {
+    @include btn($color-primary, #071746);
+    padding: 16px 32px;
+    .btnText {
+        padding-left: 4px;
+    }
+}
