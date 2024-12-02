@@ -1,0 +1,19 @@
+@use "../../../../../styles/common" as *;
+
+.resumePoint {
+    padding-top: 56px;
+    .resumePointTitle {
+        color: $color-primary;
+    }
+    .line {
+        border: solid 1px $color-border-gray;
+        margin: 16px 0;
+    }
+    .resumePointContainer {
+        display: flex;
+        gap: 24px;
+    }
+    &:nth-of-type(6) .resumePointContainer {
+        padding-bottom: 56px;
+    }
+}

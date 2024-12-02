@@ -87,6 +87,7 @@ export const TECHNIQUE_TEXT: TechniqueTextType[] = [
               あるトピックについての立場や考えを明確に伝える際に利用されることが多く、自己PRの構成に最適とされています。
             </p>
             <FlagContentsContainer 
+              id={"primary"} 
               title={POINT_TITLE[0].title} 
               text={
               <>
@@ -100,7 +101,8 @@ export const TECHNIQUE_TEXT: TechniqueTextType[] = [
               STAR法は、具体的な経験や事例を用いて相手に明確に伝えることで、効果的なコミュニケーションが期待できる方法です。<br></br>
               過去の経験や実績を具体的かつ構造的に伝える際に利用されることが多く、エピソードの構成に最適とされています。
             </p>
-              <FlagContentsContainer 
+              <FlagContentsContainer
+                  id={"primary"} 
                   title={POINT_TITLE[1].title} 
                   text={
                     <>

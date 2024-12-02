@@ -4,14 +4,15 @@ import { GUIDE_DATA, GUIDE_SECTION_CONTENTS } from '@/data/data';
 import styles from "./Guide01.module.scss";
 import Image from 'next/image';
 import { SubTitle } from '@/components/parts/subtitle/SubTitle';
-import { BuildConfidence } from '@/components/subTitleContents/guide03/buildConfidence/BuildConfidence';
 import { RelativePageSection } from '@/components/parts/relativePageSection/RelativePageSection';
-import { CheckAppearance } from '@/components/subTitleContents/guide03/checkAppearance/CheckAppearance';
 import { ButtonContainer } from '@/components/parts/buttonContainer/ButtonContainer';
 import { Resume } from '@/components/subTitleContents/guide01/resume/Resume';
 import { ResumeSample } from '@/components/subTitleContents/guide01/resumeSample/ResumeSample';
 import { ResumeTemplate } from '@/components/subTitleContents/guide01/resumeTemplate/ResumeTemplate';
+import { ResumeHowTo } from '@/components/subTitleContents/guide01/resumeHowTo/ResumeHowTo';
 import { ResumePoint } from '@/components/subTitleContents/guide01/resumePoint/ResumePoint';
+import { RevisedResume } from '@/components/subTitleContents/guide01/revisedResume/RevisedResume';
+import { RecruitPoint } from '@/components/subTitleContents/guide01/recruitPoint/RecruitPoint';
 
 const DynamicContentsList = dynamic(() => import('../../../components/parts/contentsList/ContentsList'));
 
@@ -57,10 +58,12 @@ const Guide01 = () => {
                 ) : content.id === 2 ? (
                   <ResumeTemplate/>
                 ) : content.id === 3 ? (
-                  <ResumePoint/>
+                  <ResumeHowTo/>
                 ) : content.id === 4 ? (
-                  <CheckAppearance/>
-                ) : <BuildConfidence/>
+                  <RevisedResume/>
+                ) : content.id === 5 ? (
+                  <RecruitPoint/>
+                  ):<ResumePoint/>
                 }
               </div>
             ))}

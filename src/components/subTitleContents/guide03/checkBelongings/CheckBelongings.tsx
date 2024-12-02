@@ -103,7 +103,6 @@ export const CheckBelongings = () => {
                 )
             })}
         </ul>
-
     </div>
   )
 }

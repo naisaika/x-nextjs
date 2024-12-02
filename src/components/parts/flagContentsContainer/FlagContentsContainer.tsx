@@ -3,11 +3,12 @@ import React from 'react';
 import styles from "./FlagContentsContainer.module.scss";
 
 interface FlagContentsProps {
+    id: string;
     title: string;
     text: JSX.Element;
 }
 
-export const FlagContentsContainer = ({title, text}: FlagContentsProps) => {
+export const FlagContentsContainer = ({id, title, text}: FlagContentsProps) => {
   return (
     <div className={styles.pointSection}>
         <div className={styles.pointContainer}>
@@ -16,7 +17,7 @@ export const FlagContentsContainer = ({title, text}: FlagContentsProps) => {
                     alt="フラグマーク画像" 
                     width={24} height={24} priority>
                 </Image> 
-                <span className={styles.pointTitle}>{title}</span>
+                <span className={id === "black"? styles.pointTitle__black : styles.pointTitle__primary}>{title}</span>
             </div>
             <div className={styles.pointText}>{text}</div>
         </div>
