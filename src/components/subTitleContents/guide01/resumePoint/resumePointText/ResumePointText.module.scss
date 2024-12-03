@@ -4,4 +4,9 @@
     font-size: $size-14;
     line-height: 1.75;
     text-align: justify;
+    padding: 0 16px;
+    .listText__strong {
+        color: $color-secondary;
+        font-weight: 600;
+    }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { GUIDE_DATA, GUIDE_SECTION_CONTENTS } from '@/data/data';
-import styles from "./Guide01.module.scss";
+import styles from "./Guide02.module.scss";
 import Image from 'next/image';
 import { SubTitle } from '@/components/parts/subtitle/SubTitle';
 import { RelativePageSection } from '@/components/parts/relativePageSection/RelativePageSection';
@@ -17,11 +17,11 @@ import { ResumeQA } from '@/components/subTitleContents/guide01/resumeQA/ResumeQ
 
 const DynamicContentsList = dynamic(() => import('../../../components/parts/contentsList/ContentsList'));
 
-const SECTION_ID = 0;
+const SECTION_ID = 1;
 const sectionData = GUIDE_DATA.find((title) => title.id === SECTION_ID);
 const sectionContents = GUIDE_SECTION_CONTENTS.find((section) => section.id === SECTION_ID);
 
-const Guide01 = () => {
+const Guide02 = () => {
   return (
     <section id="guide01" className={styles.section}>
       <div className={styles.titleContainer}>
@@ -79,4 +79,4 @@ const Guide01 = () => {
   )
 }
 
-export default Guide01
+export default Guide02

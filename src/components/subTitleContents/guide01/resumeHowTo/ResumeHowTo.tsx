@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./ResumeHowTo.module.scss"
-import { RESUME_POINTS } from '@/data/data'
+import { RESUME_HOW_TO } from '@/data/data'
 import { RESUME_HOWTO_TEXT } from './resumeHowToText/ResumeHowToText'
 import Image from 'next/image'
 import { FlagContentsContainer } from '@/components/parts/flagContentsContainer/FlagContentsContainer'
@@ -13,7 +13,7 @@ export const ResumeHowTo = () => {
             履歴書の各項目には、書き方のポイントがあります。<br/>
             それぞれのポイントを掴んで、作成して行きましょう！
         </p>
-        {RESUME_POINTS.map((point) => {
+        {RESUME_HOW_TO.map((point) => {
 
           const pointText = RESUME_HOWTO_TEXT.find((text) => point.id === text.id)
           

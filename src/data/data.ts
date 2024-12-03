@@ -310,7 +310,7 @@ export const EDITOR_COMMENTS: EditorCommentType[] = [
 
 /* resume-point type*/
 
-export interface ResumePointType {
+export interface ResumeHowToType {
     id: number;
     title: string;
     img: string;
@@ -318,7 +318,7 @@ export interface ResumePointType {
     height: number;
 }
 
-export const RESUME_POINTS: ResumePointType[] = [
+export const RESUME_HOW_TO: ResumeHowToType[] = [
     { 
         id: 0, 
         title: "1）基本情報欄の書き方",
@@ -363,5 +363,73 @@ export const RESUME_POINTS: ResumePointType[] = [
         img: "/contents-img/guide01/resume6.jpg",
         width: 460,
         height: 121
+    }
+]
+
+/* resume-points type */
+
+export interface ResumePointType {
+    id: number;
+    title: string;
+}
+
+export const RESUME_POINTS: ResumePointType[] = [
+    { 
+        id: 0, 
+        title: "POINT.01｜時間に余裕をもって作成する"
+    },
+    { 
+        id: 1, 
+        title: "POINT.02｜自分に適した履歴書のテンプレート（フォーマット）を選択する"
+    },
+    { 
+        id: 2, 
+        title: "POINT.03｜文字サイズやフォントは統一する"
+    },
+    { 
+        id: 3, 
+        title: "POINT.04｜応募企業に沿った履歴書内容にする"
+    },
+    { 
+        id: 4, 
+        title: "POINT.05｜提出前に見直しをする"
+    }
+]
+
+/* resume-Q&A type */
+
+export interface ResumeQAType {
+    id: number;
+    title: string;
+}
+
+export const RESUME_QA_TITLE: ResumeQAType[] = [
+    { 
+        id: 0, 
+        title: "印鑑は必要？"
+    },
+    { 
+        id: 1, 
+        title: "履歴書のサイズは、どれが良いの？"
+    },
+    { 
+        id: 2, 
+        title: "手書きの履歴書とPC・スマートフォン入力の履歴書どちらが良いの？"
+    },
+    { 
+        id: 3, 
+        title: "履歴書の日付はいつにすれば良いの？"
+    },
+    { 
+        id: 4, 
+        title: "履歴書で使用するのは「御社」と「貴社」どっち？"
+    },
+    { 
+        id: 5, 
+        title: " 履歴書の「賞罰」は何を書けばいいの？"
+    },
+    { 
+        id: 6, 
+        title: " 略歴書との違いは？"
     }
 ]
