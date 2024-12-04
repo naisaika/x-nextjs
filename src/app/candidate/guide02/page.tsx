@@ -6,14 +6,18 @@ import Image from 'next/image';
 import { SubTitle } from '@/components/parts/subtitle/SubTitle';
 import { RelativePageSection } from '@/components/parts/relativePageSection/RelativePageSection';
 import { ButtonContainer } from '@/components/parts/buttonContainer/ButtonContainer';
-import { Resume } from '@/components/subTitleContents/guide01/resume/Resume';
-import { ResumeSample } from '@/components/subTitleContents/guide01/resumeSample/ResumeSample';
-import { ResumeTemplate } from '@/components/subTitleContents/guide01/resumeTemplate/ResumeTemplate';
-import { ResumeHowTo } from '@/components/subTitleContents/guide01/resumeHowTo/ResumeHowTo';
-import { ResumePoint } from '@/components/subTitleContents/guide01/resumePoint/ResumePoint';
-import { RevisedResume } from '@/components/subTitleContents/guide01/revisedResume/RevisedResume';
-import { RecruitPoint } from '@/components/subTitleContents/guide01/recruitPoint/RecruitPoint';
-import { ResumeQA } from '@/components/subTitleContents/guide01/resumeQA/ResumeQA';
+import { WorkExperience } from '@/components/subTitleContents/guide02/workExperience/WorkExperience';
+import { WorkExperienceSample } from '@/components/subTitleContents/guide02/workExperienceSample/WorkExperienceSample';
+import { WorkExperienceTemplate } from '@/components/subTitleContents/guide02/workExperienceTemplate/WorkExperienceTemplate';
+import { HandOrInput } from '@/components/subTitleContents/guide02/handOrInput/HandOrInput';
+import { PrepareWorkExperience } from '@/components/subTitleContents/guide02/prepareWorkExperience/PrepareWorkExperience';
+import { WorkExperiencePoint } from '@/components/subTitleContents/guide02/workExperiencePoint/WorkExperiencePoint';
+import { ReasonResignation } from '@/components/subTitleContents/guide02/reasonResignation/ReasonResignation';
+import { CareerChangeCount } from '@/components/subTitleContents/guide02/careerChangeCount/CareerChangeCount';
+import { BlankCareer } from '@/components/subTitleContents/guide02/blanckCareer/BlankCareer';
+import { RevisedWorkExperience } from '@/components/subTitleContents/guide02/revisedWorkExperience/RevisedWorkExperience';
+import { HowToSend } from '@/components/subTitleContents/guide02/howToSend/HowToSend';
+import { RecruitPoint } from '@/components/subTitleContents/guide02/recruitPoint/RecruitPoint';
 
 const DynamicContentsList = dynamic(() => import('../../../components/parts/contentsList/ContentsList'));
 
@@ -53,20 +57,28 @@ const Guide02 = () => {
                   <p className={styles.subTitle__text}>{content.contentsTitle}</p>
                 </SubTitle>
                 {content.id === 0 ? (
-                  <Resume/>
+                  <WorkExperience/>
                 ) : content.id === 1 ? (
-                  <ResumeSample />
+                  <WorkExperienceSample />
                 ) : content.id === 2 ? (
-                  <ResumeTemplate/>
+                  <WorkExperienceTemplate/>
                 ) : content.id === 3 ? (
-                  <ResumeHowTo/>
+                  <HandOrInput/>
                 ) : content.id === 4 ? (
-                  <RevisedResume/>
+                  <PrepareWorkExperience/>
                 ) : content.id === 5 ? (
-                  <RecruitPoint/>
+                  <WorkExperiencePoint/>
                 ): content.id === 6 ? (
-                  <ResumePoint/>
-                ): <ResumeQA/>
+                  <ReasonResignation/>
+                ): content.id === 7 ? (
+                  <CareerChangeCount/>
+                ): content.id === 8 ? (
+                  <BlankCareer/>
+                ): content.id === 9 ? (
+                  <RevisedWorkExperience/>
+                ): content.id === 10 ? (
+                  <RecruitPoint/>
+                ): <HowToSend/>
               }
               </div>
             ))}

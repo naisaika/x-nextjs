@@ -6,6 +6,7 @@ interface ListProps {
     list: {
       id: number;
       text: string;
+      text2?: string;
     }[];
 }
 
@@ -15,7 +16,9 @@ export const NumberList = ({list}: ListProps) => {
     {list?.map((list) => (
         <li key={list.id} className={styles.listContents}>
             <ListMarkNumber>{list.id + 1}</ListMarkNumber>
-            <p className={styles.liText}>{list.text}</p>
+            <p className={styles.liText}>
+              {list.text}
+            </p>
         </li>
     ))}  
 </ol>
