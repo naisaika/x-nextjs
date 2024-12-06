@@ -87,7 +87,6 @@ export const TECHNIQUE_TEXT: TechniqueTextType[] = [
               あるトピックについての立場や考えを明確に伝える際に利用されることが多く、自己PRの構成に最適とされています。
             </p>
             <FlagContentsContainer 
-              id={"primary"} 
               title={POINT_TITLE[0].title} 
               text={
               <>
@@ -102,14 +101,13 @@ export const TECHNIQUE_TEXT: TechniqueTextType[] = [
               過去の経験や実績を具体的かつ構造的に伝える際に利用されることが多く、エピソードの構成に最適とされています。
             </p>
               <FlagContentsContainer
-                  id={"primary"} 
-                  title={POINT_TITLE[1].title} 
-                  text={
-                    <>
-                      <NumberList list={POINT_TEXT[1].points} />
-                      <p className={styles.flagText}>このように構成を組み立てることで具体的なエピソードの状況や課題・行動・結果の情報が正確に面接官へ伝えることができます。</p>
-                    </>
-                  }
+                title={POINT_TITLE[1].title} 
+                text={
+                  <>
+                    <NumberList list={POINT_TEXT[1].points} />
+                    <p className={styles.flagText}>このように構成を組み立てることで具体的なエピソードの状況や課題・行動・結果の情報が正確に面接官へ伝えることができます。</p>
+                  </>
+                }
               />
           </>
         ),

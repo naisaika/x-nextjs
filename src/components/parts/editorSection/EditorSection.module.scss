@@ -25,5 +25,10 @@
         background-color: $color-open-light;
         border-radius: 8px;
         padding: 16px;
+        .editorLink {
+            color: $color-secondary;
+            text-decoration: underline;
+            cursor: pointer;
+        }
     }
 }

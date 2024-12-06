@@ -1,1 +1,27 @@
 @use "../../../../../styles/common" as *;
+
+.point {
+    padding-top: 56px;
+    .pointTitle {
+        color: $color-primary;
+    }
+    .line {
+        border: solid 1px $color-border-gray;
+        margin: 16px 0;
+    }
+    .pointContainer {
+        display: flex;
+        gap: 24px;
+        @include mq (900px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .pointImg {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &:nth-of-type(4) .pointContainer {
+        padding-bottom: 56px;
+    }
+}

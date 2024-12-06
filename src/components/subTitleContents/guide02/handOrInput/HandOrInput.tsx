@@ -12,7 +12,8 @@ interface pointTitleType {
 
 interface tableListType {
   id: number;
-  title: string;
+  title1: string;
+  title2?: string;
   text: string;
 }
 
@@ -24,37 +25,41 @@ const POINT_TITLE: pointTitleType[] = [
 const TABLE_LISTS: tableListType[] = [
   {
       id: 0, 
-      title: "向き・サイズ",
+      title1: "向き・サイズ",
       text: "A4用紙のタテが基本"
   },
   {
       id: 1, 
-      title: "紙色",
+      title1: "紙色",
       text: "白無地"
   },
   {
       id: 2, 
-      title: "印刷",
+      title1: "印刷",
       text: "片面に印刷する"
   },
   {
       id: 3, 
-      title: "フォント（パソコンで作成する場合）",
+      title1: "フォント",
+      title2: "（パソコンで作成する場合）",
       text: "フォントはWordやExcelで使用されている標準フォントを使用"
   },
   {
       id: 4, 
-      title: "文字サイズ（パソコン）",
+      title1: "文字サイズ",
+      title2: "（パソコン）",
       text: "10.5～11pt"
   },
   {
     id: 5, 
-    title: "文字サイズ（手書き）",
+    title1: "文字サイズ",
+    title2: "（手書き）",
     text: "枠の8〜9割のサイズ"
   },
 ]
 
 const comment = EDITOR_COMMENTS[2]
+const comment2 = EDITOR_COMMENTS[3]
 
 export const HandOrInput = () => {
   return (
@@ -78,19 +83,67 @@ export const HandOrInput = () => {
       <ul className={styles.contentsList}>
             {POINT_TITLE.map((title) => {
 
-              const questionText = QUESTION_TEXT.find((text) => text.id === title.id);
-
               return (
                 <li key={title.id}>
                     <ContentsTitle>
-                      <span>{title.titleNum}</span>
                       <span>{title.title}</span>
                     </ContentsTitle>
                     <div className={styles.line}></div>
-                    <div className={styles.textContainer}>{questionText?.text}</div>
+                    {title.id === 0? (
+                      <table >
+                          <tbody className={styles.templateTable}>
+                          {TABLE_LISTS.slice(0, 2).map((item) => (
+                            <tr key={item.id} className={styles.tableRow}>
+                                <th className={styles.tableTitle}>
+                                    {item.title1}<br />
+                                    {item.title2}
+                                </th>
+                                <td className={styles.tableContents}>
+                                    {item.text}
+                                </td>
+                            </tr>
+                            ))}
+         
+                            {TABLE_LISTS.slice(2, 4).map((item) => (
+                            <tr key={item.id} className={styles.tableRow}>
+                                <th className={styles.tableTitle}>
+                                    {item.title1}<br />
+                                    {item.title2}
+                                </th>
+                                <td className={styles.tableContents}>
+                                    {item.text}
+                                </td>
+                            </tr>
+                            ))}
+                            {TABLE_LISTS.slice(4).map((item) => (
+                            <tr key={item.id} className={styles.tableRow}>
+                                <th className={styles.tableTitle}>
+                                    {item.title1}<br />
+                                    {item.title2}
+                                </th>
+                                <td className={styles.tableContents}>
+                                  {item.text}
+                                </td>
+                            </tr>
+                            ))}
+                          </tbody>
+                            
+                    </table>
+                    ): (
+                      <>
+                        <p className={styles.guideText}>
+                          職務経歴書の枚数は、2枚でまとめると最適です。<br/>
+                          3枚以上の職務経歴書は、採用担当者が内容を確認する負担が増えてしまいます。<br/>
+                          転勤や異動が多い場合は、経験やスキルごとに整理してコンパクトにまとめましょう。<br/>
+                          転職回数が多く2枚で収めることが難しい場合は、余白や行間のバランスを取り、
+                          レイアウトを考慮しながら読みやすくまとめることができれば3枚以上となってしまっても問題ありません。
+                        </p>
+                        <EditorSection comment={comment2}/> 
+                      </>
+                    )}
                 </li>
             )})}
         </ul>
-</div>
-  )
-}
+      </div>
+    )
+  }

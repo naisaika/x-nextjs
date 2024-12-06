@@ -46,7 +46,6 @@ export const ResearchCompany = () => {
                                 また、企業が求める方向性と自分のビジョンが一致しているかどうかを確認することもできるため、アンマッチな企業への転職も防ぐことができます。
                             </p> 
                             <FlagContentsContainer
-                                id={"black"}
                                 title={"企業への理解の深め方"}
                                 text={
                                     <ul>

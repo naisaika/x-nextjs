@@ -16,19 +16,10 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            .pointTitle__black {
-                color: $color-black;
+            .pointTitle {
+                color: $color-primary;
                 font-size: $size-16;
                 font-weight: 700;
-                @include mq (375px) {
-                    font-size: $size-18;
-                }
-            }
-            .pointTitle__primary {
-                color: $color-primary;
-                font-size: $size-20;
-                font-weight: 700;
-                margin-bottom: 2px;
                 @include mq (375px) {
                     font-size: $size-18;
                 }

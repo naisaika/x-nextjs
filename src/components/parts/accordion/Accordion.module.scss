@@ -1,0 +1,42 @@
+@use "../../../../styles/common" as *;
+
+.accordionList {
+    list-style: none;
+    .accordionItem {
+        margin: 16px 0;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: $size-16;
+        .accordionQuestion {
+            display: flex;
+            align-items: center;
+            border: solid 1px $color-black;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            justify-content: space-between;
+            padding: 16px;
+        }
+        .accordionAnswerContainer {
+            display: none;
+        }
+        .accordionAnswerContainer__open {
+            display: flex;
+            padding: 16px 32px 16px 24px;
+            border-right: solid 1px $color-black;
+            border-left: solid 1px $color-black;
+            border-bottom: solid 1px $color-black;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            font-size: $size-14;
+            font-weight: 400;
+            .answerMark {
+                margin-right: 4px;
+                font-size: $size-16;
+                font-weight: 500;
+            }
+        }
+    }
+}

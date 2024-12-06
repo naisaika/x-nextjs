@@ -51,7 +51,6 @@ export const ResearchMyself = () => {
                                 同業種への転職の場合は、前職を批判しないよう注意しましょう。<br/>
                             </p> 
                             <FlagContentsContainer
-                                id={"black"}
                                 title={"志望動機の例文"}
                                 text={
                                     <>

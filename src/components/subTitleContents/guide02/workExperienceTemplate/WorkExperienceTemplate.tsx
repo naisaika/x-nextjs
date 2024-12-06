@@ -84,7 +84,7 @@ export const WorkExperienceTemplate = () => {
         <table className={styles.templateTable}>
             <thead className={styles.tableRow}>
                 {DOWNLOAD_LISTS.slice(0, 2).map((item) => (
-                <tr key={item.id} className={styles.tableContainer}>
+                <tr key={item.id} className={`${styles.firstTable} ${styles.tableContainer}`}>
                     <th className={styles.tableTitle}>
                         {item.title1}<br />
                         {item.title2}
@@ -97,7 +97,7 @@ export const WorkExperienceTemplate = () => {
             </thead>
             <tbody className={styles.tableRow}>
                 {DOWNLOAD_LISTS.slice(2, 4).map((item) => (
-                <tr key={item.id}>
+                <tr key={item.id} className={styles.tableContainer}>
                     <th className={styles.tableTitle}>
                         {item.title1}<br />
                         {item.title2}
@@ -110,7 +110,7 @@ export const WorkExperienceTemplate = () => {
             </tbody>
             <tfoot className={styles.tableRow}>
                 {DOWNLOAD_LISTS.slice(4).map((item) => (
-                <tr key={item.id} className={styles.lastTable}>
+                <tr key={item.id} className={`${styles.lastTable} ${styles.tableContainer}`}>
                     <th className={styles.tableTitle}>
                         {item.title1}<br />
                         {item.title2}

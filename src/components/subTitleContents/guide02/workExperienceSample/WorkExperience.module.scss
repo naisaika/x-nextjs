@@ -10,6 +10,11 @@
         .sampleImg {
             display: flex;
             gap: 16px;
+            img {
+                width: 50%;
+                height: auto;
+                flex: 1;
+            }        
         }
     }
     .list {

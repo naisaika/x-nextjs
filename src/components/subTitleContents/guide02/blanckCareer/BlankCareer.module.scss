@@ -1,1 +1,12 @@
 @use "../../../../../styles/common" as*;
+
+.pointItem {
+    margin: 56px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .pointTitle {
+        color: $color-primary;
+    }
+}
+

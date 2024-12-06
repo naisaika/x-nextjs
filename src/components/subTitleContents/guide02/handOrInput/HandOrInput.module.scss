@@ -1,1 +1,31 @@
 @use "../../../../../styles/common" as *;
+
+.templateTable {
+    padding: 16px 16px 56px;
+    border-spacing: 0;
+    display: flex;
+    flex-wrap: wrap;
+    .tableRow {
+        display: table;
+        border-top: solid 1px $color-primary;
+        width: 50%;
+        &:nth-last-of-type(2) {
+            border-bottom: solid 1px $color-primary;
+        }
+        &:last-of-type {
+            border-bottom: solid 1px $color-primary;
+        }
+        .tableTitle {
+            background-color: $color-primary-10pct;
+            padding: 32px 24px;
+            color: $color-primary;
+            font-weight: 600;
+            font-size: $size-16;
+            width: 40%;
+        }
+        .tableContents {
+            padding: 36px 32px;
+            width: 60%;
+        }
+    }
+}

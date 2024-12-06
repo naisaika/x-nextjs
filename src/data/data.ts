@@ -261,6 +261,7 @@ export interface EditorCommentType {
     text: string;
     link?: string;
     text2?: string;
+    anchorlink?: string;
 }
 
 export const EDITOR_COMMENTS: EditorCommentType[] = [
@@ -288,8 +289,9 @@ export const EDITOR_COMMENTS: EditorCommentType[] = [
         id: 4, 
         section: "guide02",
         text: "もし「転職回数が多い」「職歴の空白期間が多い」ことで悩む方は",
-        link: "こちらの内容。",
-        text2: "を参考にしてください。"
+        link: "こちらの内容を参考",
+        text2: "にしてください。",
+        anchorlink: "careerChangeCount"
     },
     { 
         id: 5, 
@@ -308,7 +310,7 @@ export const EDITOR_COMMENTS: EditorCommentType[] = [
     },
 ]
 
-/* resume-point type*/
+/* resume-howto type*/
 
 export interface ResumeHowToType {
     id: number;
@@ -431,5 +433,308 @@ export const RESUME_QA_TITLE: ResumeQAType[] = [
     { 
         id: 6, 
         title: " 略歴書との違いは？"
+    }
+]
+
+/* work-experience-points type */
+
+export interface WorkExperiencePointType {
+    id: number;
+    title: string;
+}
+
+export const WORK_EXPERIENCE_POINTS: WorkExperiencePointType[] = [
+    { 
+        id: 0, 
+        title: "STEP.01｜今までの職務経験を書き出す"
+    },
+    { 
+        id: 1, 
+        title: "STEP.02｜応募先企業と自身の経歴の共通点を探す"
+    },
+    { 
+        id: 2, 
+        title: "STEP.03｜記載する内容を整理する"
+    }
+]
+
+/* work-experience-howto type*/
+
+export interface WorkExperienceHowToType {
+    id: number;
+    title?: string;
+    img: string;
+    width: number;
+    height: number;
+}
+
+export const WORK_EXPERIENCE_HOW_TO: WorkExperienceHowToType[] = [
+    { 
+        id: 0, 
+        title: "1）タイトル・職務要約の書き方",
+        img: "/contents-img/guide02/work-experience1.jpg",
+        width: 460,
+        height: 203
+    },
+    { 
+        id: 1, 
+        title: "2）職務経歴の書き方",
+        img: "/contents-img/guide02/work-experience2.jpg",
+        width: 460,
+        height: 337
+    },
+    { 
+        id: 2, 
+        img: "/contents-img/guide02/work-experience3.jpg",
+        width: 420,
+        height: 247
+    },
+    { 
+        id: 3, 
+        title: "3）スキル・資格の書き方",
+        img: "/contents-img/guide02/work-experience4.jpg",
+        width: 460,
+        height: 237
+    },
+
+    { 
+        id: 4, 
+        title: "4）自己PRの書き方",
+        img: "/contents-img/guide02/work-experience5.jpg",
+        width: 460,
+        height: 169
+    }
+]
+
+/* work-experience-Q&A type */
+
+export interface WorkExperienceQAType {
+    id: number;
+    title: string;
+}
+
+export const WORK_EXPERIENCE_QA_TITLE: WorkExperienceQAType[] = [
+    { 
+        id: 0, 
+        title: "写真は必要？"
+    },
+    { 
+        id: 1, 
+        title: "印鑑は必要？"
+    },
+    { 
+        id: 2, 
+        title: "アルバイトは職歴に含める？"
+    },
+    { 
+        id: 3, 
+        title: "社内異動は書く？"
+    }
+]
+
+/* reason-Resignation type */
+
+export interface reasonResignationType {
+    id: number;
+    text: string;
+}
+
+export const REASON_RESIGNATION: reasonResignationType[] = [
+    { 
+        id: 0, 
+        text: "倒産や人員整理といった会社都合による退職をした場合"
+    },
+    { 
+        id: 1, 
+        text: "転職回数が多い場合"
+    },
+    { 
+        id: 2, 
+        text: "前職を短期間で離職してしまった場合"
+    }
+]
+
+/* blank-career-points type */
+
+export interface BlanckCareerPointType {
+    id: number;
+    title: string;
+}
+
+export const BLANK_CAREER_POINTS: BlanckCareerPointType[] = [
+    { 
+        id: 0, 
+        title: "CASE.01｜転職活動が長引き、空白期間が生まれた"
+    },
+    { 
+        id: 1, 
+        title: "CASE.02｜空白期間に何もしていなかった"
+    },
+    { 
+        id: 2, 
+        title: "CASE.03｜空白期間にアルバイトをしていた"
+    },
+    { 
+        id: 3, 
+        title: "CASE.04｜親の介護や自身の病気などやむを得ない事情があった"
+    },
+    { 
+        id: 4, 
+        title: "CASE.05｜資格取得や職業訓練、語学留学などをしていた"
+    }
+]
+
+/* send-points type */
+
+export interface SendPointType {
+    id: number;
+    title: string;
+    img: string;
+    img2?: string;
+    height: number;
+    height2?: number;
+    imgtitle: string;
+    imgtitle2?: string;
+}
+
+export const SEND_POINTS: SendPointType[] = [
+    { 
+        id: 0, 
+        title: "CASE.01｜メールでの送付",
+        img: "/contents-img/guide02/email.jpg",
+        height: 535,
+        imgtitle: "メールの例"
+    },
+    { 
+        id: 1, 
+        title: "CASE.02｜郵送での送付",
+        img: "/contents-img/guide02/post1.jpg",
+        img2: "/contents-img/guide02/post2.jpg",
+        height: 632,
+        height2: 291,
+        imgtitle: "送付状サンプル",
+        imgtitle2: "封筒のサンプル",
+    },
+    { 
+        id: 2, 
+        title: "CASE.03｜手渡しをする",
+        img: "/contents-img/guide02/post3.jpg",
+        height: 318,
+        imgtitle: "封筒のサンプル",
+    }
+]
+
+/* send-text type */
+
+export interface SendTextType {
+    id: number;
+    title: string;
+    detail: SendTextDetailType[];
+}
+
+export interface SendTextDetailType {
+    id: number;
+    flow: string;
+    text: string;
+}
+
+export const SEND_TEXT: SendTextType[] = [
+    { 
+        id: 0, 
+        title: "メール送付のポイント！",
+        detail: [
+            { 
+                id: 0, 
+                flow: "応募書類はPDF形式で送付",
+                text: "PDFファイルは相手の閲覧環境に左右されません！"
+            },
+            { 
+                id: 1, 
+                flow: "応募書類にはパスワードをかける",
+                text: "個人情報保護のために設定しましょう！"
+            },
+            { 
+                id: 2, 
+                flow: "件名には用件と氏名を入力",
+                text: "相手が件名を見ただけで内容を把握できます！"
+            },
+            { 
+                id: 3,
+                flow: "個人の宛名は「〇〇様」／部署の宛名は「〇〇課御中」",
+                text: "間違えないように注意しましょう！"
+            },
+            { 
+                id: 4, 
+                flow: "メール本文は「宛名」→「あいさつ」→「内容」→「締め」→「署名」で構成",
+                text: "メール文の一般的な基本構成を使いましょう！"
+            },
+        ]
+    },
+    { 
+        id: 1, 
+        title: "郵送のポイント！",
+        detail: [
+            { 
+                id: 0, 
+                flow: "送付状を用意する",
+                text: "あいさつ状としての役割なので忘れずに！"
+            },
+            { 
+                id: 1, 
+                flow: "応募書類はクリアファイルに入れる",
+                text: "折曲がったり濡れたりしないように保護しましょう！"
+            },
+            { 
+                id: 2, 
+                flow: "封入の順番は上から「送付状」→「履歴書」→「職務経歴書」→「その他書類」",
+                text: "順番を間違えないように注意しましょう！"
+            },
+            { 
+                id: 3,
+                flow: "封筒は「角型2号」または「角型A4号」を選ぶ",
+                text: "A4サイズの書類がぴったり入る大きさです！"
+            },
+            { 
+                id: 4, 
+                flow: "封筒の表面に「応募書類在中」と赤色で書く",
+                text: "文字がにじまないよう油性ペンを使いましょう！"
+            },
+        ]
+    },
+    { 
+        id: 2, 
+        title: "手渡しのポイント！",
+        detail: [
+            { 
+                id: 0, 
+                flow: "応募書類はクリアファイルに入れる",
+                text: "折曲がったり濡れたりしないように保護しましょう！"
+            },
+            { 
+                id: 1, 
+                flow: "封入の順番は上から「履歴書」→「職務経歴書」→「その他書類」",
+                text: "順番を間違えないように注意しましょう！"
+            },
+            { 
+                id: 2, 
+                flow: "封筒は「角型2号」または「角型A4号」を選ぶ",
+                text: "A4サイズの書類がぴったり入る大きさです！"
+            },
+            { 
+                id: 3,
+                flow: "封筒表面の宛先記入は不要",
+                text: "封筒裏面の自分の氏名と住所の記入は忘れずに！"
+            },
+            { 
+                id: 4, 
+                flow: "封筒の表面は「応募書類在中」と赤色で書く",
+                text: "文字がにじまないよう油性ペンを使いましょう！"
+            },
+            { 
+                id: 5, 
+                flow: "封筒の封はしない",
+                text: "すぐに中身を取り出せるようにしておきましょう！"
+            },
+        ]
     }
 ]

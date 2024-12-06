@@ -33,7 +33,6 @@ export const ResumeHowTo = () => {
                 {pointText?.text}
               </div>
               <FlagContentsContainer
-                id={"black"}
                 title={"年度の書き方にルールはある？"}
                 text={
                   <>
